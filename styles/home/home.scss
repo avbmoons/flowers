@@ -1,0 +1,340 @@
+@use "sass:math";
+
+@import "../vars/vars.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  //font-family: RobotoMono;
+  font-family: Montserrat;
+  color: $color-font;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: $site-width;
+  height: auto;
+  @include flex-vertical();
+  justify-content: space-between;
+  .top {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    @include flex-vertical();
+    justify-content: space-between;
+    flex-grow: 1;
+    .header {
+      margin: 0 auto;
+      width: 100%;
+      height: $header-height;
+      @include flex-vertical();
+      justify-content: space-between;
+      .header-top {
+        margin: 0 auto;
+        width: 100%;
+        height: $header-top-height;
+        @include flex-horizontal();
+        justify-content: space-between;
+        .logo-box {
+          margin: auto;
+          width: 20%;
+          height: 70%;
+          @include flex-vertical();
+          align-items: start;
+          //border: 1px solid red;
+          .logo {
+            margin: 0 auto;
+            width: auto;
+            height: 100%;
+            //border: 1px solid green;
+          }
+        }
+        .menu-box {
+          margin: auto;
+          width: 60%;
+          height: 70%;
+          @include flex-vertical();
+          //border: 1px solid red;
+          &__block {
+            margin: 0 auto;
+            width: 100%;
+            height: 100%;
+            @include flex-horizontal();
+            .menu-item {
+              margin: auto;
+              width: fit-content;
+              text-decoration: none;
+              @include text-font(16px, 500, 16px, 0%);
+              color: $color-down;
+            }
+          }
+        }
+        .services-box {
+          margin: auto;
+          width: 20%;
+          height: 70%;
+          @include flex-vertical();
+          //border: 1px solid red;
+          &__block {
+            margin: 0 auto;
+            width: 100%;
+            height: 100%;
+            @include flex-horizontal();
+            justify-content: flex-end;
+            .search-box,
+            .user-box,
+            .cart-box {
+              margin: auto 0;
+              margin-left: 2%;
+              width: auto;
+              height: 100%;
+              @include flex-vertical();
+              .service-button {
+                margin: auto;
+                height: 100%;
+                background: none;
+                border: 1px solid white;
+                outline: none;
+                @include flex-vertical();
+                img {
+                  margin: auto;
+                  width: auto;
+                  height: fit-content;
+                  padding: 5px;
+                }
+              }
+              .service-button:focus {
+                border: 1px solid $color-prime;
+                border-radius: 5px;
+                box-sizing: border-box;
+              }
+            }
+          }
+        }
+      }
+      .header-bottom {
+        margin: 0 auto;
+        width: 100%;
+        height: $header-top-height;
+        @include flex-vertical();
+        background-color: $color-prime;
+        .search-input-box {
+          margin: 0 auto;
+          //margin-left: 2%;
+          width: 60%;
+          height: 70%;
+          @include flex-horizontal();
+          display: none;
+          //border: 1px solid red;
+          .search-input {
+            padding-left: 10px;
+            width: 90%;
+            height: 100%;
+            border: none; // 1px solid $color-prime-dark;
+            outline: $color-down-dark;
+            @include text-font(14px, 400, 14px, 0%);
+            color: $color-font;
+          }
+          .search-input::placeholder {
+            @include text-font(14px, 400, 14px, 0%);
+            color: $color-down-light;
+          }
+          .search-button {
+            width: 5%;
+            height: 100%;
+            border: none;
+            outline: none;
+            background-color: $color-prime-dark;
+            @include text-font(16px, 400, 16px, 0%);
+            color: white;
+          }
+          .search-close {
+            width: 5%;
+            height: 100%;
+            border: none;
+            outline: none;
+            background-color: $color-prime-dark;
+            @include text-font(16px, 400, 16px, 0%);
+            color: $color-accent;
+          }
+        }
+      }
+    }
+    .main {
+      margin: 0 auto;
+      width: 100%;
+      min-height: $main-min-height;
+      @include flex-vertical();
+      justify-content: flex-start;
+      .hero {
+        margin: 0 auto;
+        width: 100%;
+        height: $slide-height;
+        @include flex-vertical();
+        justify-content: flex-start;
+        //border: 2px solid red;
+        .slide {
+          margin: 0 auto;
+          margin-bottom: 20px;
+          width: 100%; // auto;
+          height: auto; // 50%; // 100%;
+          @include flex-horizontal();
+          //border: 2px solid green;
+          img {
+            margin: 0 auto;
+            width: math.div($site-width, 2); // $site-width/3; // auto;
+            height: auto; // 100%;
+          }
+        }
+        .delivery-box {
+          margin: 0 auto;
+          width: $block-width;
+          @include flex-vertical();
+          //border: 1px solid red;
+          &__heading {
+            margin: 0 auto;
+            margin-bottom: 10px;
+            .heading-prime {
+              padding: 10px;
+              @include text-font(20px, 600, 20px, 0%);
+              color: $color-down;
+              text-align: center;
+            }
+          }
+          &__order {
+            margin: 0 auto;
+            width: 100%;
+            @include flex-horizontal();
+            .delivery-input {
+              height: $header-bottom-height * 0.8;
+            }
+            .delivery-input::placeholder {
+              padding-left: 10px;
+              color: $color-down-light;
+            }
+            .delivery-address {
+              width: 40%;
+            }
+          }
+        }
+      }
+      .featured,
+      .best-selling,
+      .promo {
+        margin: 0 auto;
+        margin-bottom: 40px;
+        width: $block-width; // 100%;
+        min-height: $block-min-height; // $slide-height;
+        @include flex-vertical();
+        justify-content: flex-start;
+        //border: 2px solid red;
+        .heading-prime {
+          padding: 10px;
+          @include text-font(20px, 600, 20px, 0%);
+          color: $color-down;
+          //border: 2px solid blue;
+        }
+        &__block {
+          margin: auto;
+          width: 100%;
+          //height: auto;
+          height: 80%;
+          @include flex-horizontal();
+          justify-content: space-between;
+          //border: 2px solid orange;
+          .product {
+            margin: 0 auto;
+            width: 19%;
+            height: 100%;
+            @include flex-vertical();
+            justify-content: space-between;
+            border: 1px solid $color-down-light;
+            .product-image {
+              width: 100%;
+              height: auto;
+              @include flex-vertical();
+              cursor: pointer;
+              img {
+                width: 100%;
+                height: auto;
+              }
+            }
+            .product-info {
+              width: 100%;
+              height: auto;
+              @include flex-vertical();
+              .product-title {
+                padding: 10px;
+                width: 100%;
+                height: auto;
+                text-decoration: none;
+                @include text-font(16px, 500, 16px, 0%);
+                color: $color-font;
+                cursor: pointer;
+              }
+              .product-title:hover {
+                @include text-font(16px, 600, 16px, 0%);
+              }
+              .product-price-box {
+                padding: 10px;
+                width: 100%;
+                height: auto;
+                @include flex-horizontal();
+                justify-content: flex-start;
+                .price-text {
+                  @include text-font(14px, 400, 14px, 0%);
+                }
+                .price-value,
+                .price-currency {
+                  margin-left: 10px;
+                  @include text-font(16px, 500, 16px, 0%);
+                }
+              }
+            }
+            .product-button {
+              width: 100%;
+              height: 30px;
+              .to-cart {
+                margin: auto;
+                padding-left: 10px;
+                width: 100%;
+                height: 100%;
+                text-align: left;
+                @include text-font(16px, 500, 16px, 0%);
+                color: $color-prime;
+                background: none;
+                border: none;
+                outline: none;
+                cursor: pointer;
+              }
+            }
+            .product-button:hover .to-cart {
+              @include text-font(16px, 700, 16px, 0%);
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    margin: 0 auto;
+    width: 100%;
+    height: $footer-height;
+    @include flex-vertical();
+    justify-content: space-between;
+    background-color: $color-down;
+    .icons {
+      width: 36px;
+      height: 36px;
+      cursor: pointer;
+    }
+    // .icons:hover {
+    //   background-color: $color-accent;
+    // }
+    .icons:hover {
+      background-color: yellow;
+    }
+  }
+}
