@@ -56,6 +56,9 @@ body {
           width: 60%;
           height: 70%;
           @include flex-vertical();
+          @media only screen and (max-width: 1023px) {
+            display: none;
+          }
           //border: 1px solid red;
           &__block {
             margin: 0 auto;
@@ -69,6 +72,70 @@ body {
               @include text-font(16px, 500, 16px, 0%);
               color: $color-down;
             }
+            .menu-item:hover {
+              color: $color-hover-accent;
+            }
+          }
+        }
+        .menu-mini-box {
+          margin: auto;
+          width: auto;
+          height: auto;
+          @include flex-vertical();
+          position: relative;
+          @media only screen and (min-width: 1024px) {
+            display: none;
+          }
+          .menu-mini-button {
+            width: fit-content;
+            height: 70%;
+            background: none;
+            border: none;
+            outline: none;
+            cursor: pointer;
+          }
+          .menu-mini {
+            margin: 0 auto;
+            padding: 10px;
+            width: 50vw; // fit-content;
+            min-height: $header-height * 1.5;
+            position: absolute;
+            top: $header-top-height * 0.8;
+            left: -5px;
+            float: left;
+            @include flex-vertical();
+            display: none;
+            justify-content: space-between;
+            background-color: rgba($color: $color-prime, $alpha: 0.9);
+            z-index: 99;
+            .menu-mini-close {
+              width: 100%;
+              @include flex-horizontal();
+              justify-content: flex-end;
+              .close-button {
+                width: fit-content;
+                @include text-font(16px, 500, 16px, 0%);
+                color: $color-accent;
+                text-align: right;
+                background: none;
+                border: none;
+                outline: none;
+                cursor: pointer;
+              }
+            }
+            .menu-item {
+              margin: 0;
+              width: fit-content;
+              text-decoration: none;
+              @include text-font(16px, 500, 16px, 0%);
+              color: white;
+            }
+            .menu-item:hover {
+              color: $color-hover-accent;
+            }
+          }
+          .menu-mini-box:hover .menu-mini {
+            display: flex;
           }
         }
         .services-box {
@@ -125,6 +192,9 @@ body {
           //margin-left: 2%;
           width: 60%;
           height: 70%;
+          @media only screen and (max-width: 1023px) {
+            width: 80%;
+          }
           @include flex-horizontal();
           display: none;
           //border: 1px solid red;
@@ -132,6 +202,9 @@ body {
             padding-left: 10px;
             width: 90%;
             height: 100%;
+            @media only screen and (max-width: 1023px) {
+              width: 80%;
+            }
             border: none; // 1px solid $color-prime-dark;
             outline: $color-down-dark;
             @include text-font(14px, 400, 14px, 0%);
@@ -144,6 +217,9 @@ body {
           .search-button {
             width: 5%;
             height: 100%;
+            @media only screen and (max-width: 1023px) {
+              width: 10%;
+            }
             border: none;
             outline: none;
             background-color: $color-prime-dark;
@@ -153,6 +229,9 @@ body {
           .search-close {
             width: 5%;
             height: 100%;
+            @media only screen and (max-width: 1023px) {
+              width: 10%;
+            }
             border: none;
             outline: none;
             background-color: $color-prime-dark;
@@ -172,6 +251,9 @@ body {
         margin: 0 auto;
         width: 100%;
         height: $slide-height;
+        // @media only screen and (max-width: 1023px) {
+        //   height: $slide-height * 0.8;
+        // }
         @include flex-vertical();
         justify-content: flex-start;
         //border: 2px solid red;
@@ -181,11 +263,17 @@ body {
           width: 100%; // auto;
           height: auto; // 50%; // 100%;
           @include flex-horizontal();
+          @media only screen and (max-width: 1023px) {
+            @include flex-vertical();
+          }
           //border: 2px solid green;
           img {
             margin: 0 auto;
             width: math.div($site-width, 2); // $site-width/3; // auto;
             height: auto; // 100%;
+            @media only screen and (max-width: 1023px) {
+              width: 100%;
+            }
           }
         }
         .delivery-box {
@@ -243,10 +331,16 @@ body {
           height: 80%;
           @include flex-horizontal();
           justify-content: space-between;
+          @media only screen and (max-width: 767px) {
+            flex-wrap: wrap;
+          }
           //border: 2px solid orange;
           .product {
             margin: 0 auto;
             width: 19%;
+            @media only screen and (max-width: 767px) {
+              width: 47%;
+            }
             height: 100%;
             @include flex-vertical();
             justify-content: space-between;
@@ -322,19 +416,122 @@ body {
     margin: 0 auto;
     width: 100%;
     height: $footer-height;
+    @media only screen and (max-width: 1023px) {
+      height: 30vh;
+    }
     @include flex-vertical();
     justify-content: space-between;
     background-color: $color-down;
-    .icons {
-      width: 36px;
-      height: 36px;
-      cursor: pointer;
+    .footer-top {
+      margin: 0 auto;
+      padding-left: 2%;
+      padding-right: 2%;
+      width: 100%;
+      height: 60%;
+      @include flex-horizontal();
+      @media only screen and (max-width: 1023px) {
+        @include flex-vertical();
+      }
+      justify-content: space-between;
+      //border: 1px solid yellow;
+      .footer-logo {
+        margin: auto 0;
+        width: fit-content;
+        height: 70%;
+        @media only screen and (max-width: 1023px) {
+          height: 30%;
+        }
+        @include flex-vertical();
+        //border: 1px solid orange;
+        img {
+          margin: auto;
+          height: 100%;
+        }
+      }
+      .footer-contacts {
+        margin: auto 0;
+        width: fit-content;
+        height: 70%;
+        @include flex-vertical();
+        .contact {
+          @include text-font(14px, 400, 14px, 0%);
+          color: white;
+        }
+      }
+      .footer-menu {
+        margin: auto 0;
+        width: fit-content;
+        height: 70%;
+        @include flex-vertical();
+        //border: 1px solid orange;
+        .menu-box {
+          margin: auto 0;
+          height: 70%;
+          @include flex-horizontal();
+          justify-content: flex-end;
+          flex-wrap: wrap;
+          //border: 1px solid yellow;
+          .menu-item {
+            margin: auto;
+            margin-left: 10px;
+            text-decoration: none;
+            @include text-font(14px, 400, 14px, 0%);
+            color: white;
+          }
+          .menu-item:hover {
+            color: $color-down-accent;
+          }
+        }
+      }
     }
-    // .icons:hover {
-    //   background-color: $color-accent;
-    // }
-    .icons:hover {
-      background-color: yellow;
+    .footer-bottom {
+      margin: 0 auto;
+      padding-left: 2%;
+      padding-right: 2%;
+      width: 100%;
+      height: 40%;
+      @include flex-horizontal();
+      @media only screen and (max-width: 1023px) {
+        @include flex-vertical();
+      }
+      justify-content: space-between;
+      //border: 1px solid yellowgreen;
+      .footer-rights {
+        margin: auto 0;
+        width: fit-content;
+        height: 70%;
+        @media only screen and (max-width: 1023px) {
+          height: 30%;
+        }
+        @include flex-vertical();
+        .rights {
+          @include text-font(14px, 400, 14px, 0%);
+          color: white;
+        }
+      }
+      .footer-socials {
+        margin: auto 0;
+        width: fit-content;
+        height: 70%;
+        @media only screen and (max-width: 1023px) {
+          height: 40%;
+        }
+        @include flex-vertical();
+        .socials {
+          margin: auto;
+          height: 100%;
+          @include flex-horizontal();
+          justify-content: flex-end;
+          flex-wrap: wrap;
+          .social-item {
+            margin-left: 10px;
+            height: 100%;
+            img {
+              height: inherit;
+            }
+          }
+        }
+      }
     }
   }
 }

@@ -6,6 +6,7 @@
     <title>Flowers</title>
     <link rel="stylesheet" href="styles/home/home.css" />
     <script defer src="scripts/showSearch.js"></script>
+    <script defer src="scripts/showMenu.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -13,10 +14,34 @@
         <header class="header">
           <section class="header-top">
             <div class="logo-box">
-              <img class="logo" src="assets/logo/logo-prime.png" alt="logo" />
+              <img
+                class="logo"
+                src="assets/logo/logo-prime-oth.png"
+                alt="logo"
+              />
             </div>
             <div class="menu-box">
               <div class="menu-box__block">
+                <a class="menu-item" href="#">Bouquets&Flowers</a>
+                <a class="menu-item" href="#">Gifts&Cards</a>
+                <a class="menu-item" href="#">Delivery&Payment</a>
+                <a class="menu-item" href="#">About us</a>
+              </div>
+            </div>
+            <div class="menu-mini-box">
+              <button
+                class="menu-mini-button"
+                type="button"
+                onclick="menuOpen();"
+              >
+                <img src="assets/icons/burger24.png" alt="menu" />
+              </button>
+              <div class="menu-mini">
+                <div class="menu-mini-close">
+                  <button class="close-button" onclick="menuClose();">
+                    &#10006;
+                  </button>
+                </div>
                 <a class="menu-item" href="#">Bouquets&Flowers</a>
                 <a class="menu-item" href="#">Gifts&Cards</a>
                 <a class="menu-item" href="#">Delivery&Payment</a>
@@ -70,8 +95,16 @@
         <main class="main">
           <section class="hero">
             <div class="slide">
-              <img src="assets/slides/slide-2.jpg" alt="slide" />
-              <img src="assets/slides/slide-3.jpg" alt="slide" />
+              <img
+                class="slide-first"
+                src="assets/slides/slide-2.jpg"
+                alt="slide"
+              />
+              <img
+                class="slide-second"
+                src="assets/slides/slide-3.jpg"
+                alt="slide"
+              />
             </div>
             <div class="delivery-box">
               <div class="delivery-box__heading">
@@ -83,8 +116,8 @@
                   type="text"
                   placeholder="Enter delivery address..."
                 />
-                <input class="delivery-input" type="date" />
-                <input class="delivery-input" type="time" />
+                <!-- <input class="delivery-input" type="date" /> -->
+                <input class="delivery-input" type="datetime-local" />
               </div>
             </div>
           </section>
@@ -352,7 +385,46 @@
         </main>
       </div>
       <footer class="footer">
-        <img class="icons" src="assets/icons/socials/facebook36.png" alt="fb" />
+        <section class="footer-top">
+          <div class="footer-logo">
+            <img src="assets/logo/logo-white-oth.png" alt="logo" />
+          </div>
+          <div class="footer-contacts">
+            <p class="contact">+098-765-4321</p>
+            <p class="contact">qwe.asd@kukkameri.coms</p>
+          </div>
+          <div class="footer-menu">
+            <div class="menu-box">
+              <a class="menu-item" href="#">Bouquets&Flowers</a>
+              <a class="menu-item" href="#">Gifts&Cards</a>
+              <a class="menu-item" href="#">Delivery&Payment</a>
+              <a class="menu-item" href="#">About us</a>
+            </div>
+          </div>
+        </section>
+        <section class="footer-bottom">
+          <div class="footer-rights">
+            <p class="rights">
+              Kukkameri ltd.&nbsp;&#169;&nbsp;All rights reserved
+            </p>
+          </div>
+          <div class="footer-socials">
+            <div class="socials">
+              <a class="social-item" href="#"
+                ><img src="assets/icons/socials/facebook36.png" alt="fb"
+              /></a>
+              <a class="social-item" href="#"
+                ><img src="assets/icons/socials/instagram36.png" alt="fb"
+              /></a>
+              <a class="social-item" href="#"
+                ><img src="assets/icons/socials/telegram36.png" alt="fb"
+              /></a>
+              <a class="social-item" href="#"
+                ><img src="assets/icons/socials/whatsapp36.png" alt="fb"
+              /></a>
+            </div>
+          </div>
+        </section>
       </footer>
     </div>
   </body>
