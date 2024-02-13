@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flowers</title>
-    <link rel="stylesheet" href="styles/home/home.css" />
-    <script defer src="scripts/showSearch.js"></script>
-    <script defer src="scripts/showMenu.js"></script>
+    <title>Flowers.catalog</title>
+    <link rel="stylesheet" href="../styles/catalog/catalog.css" />
+    <script defer src="../scripts/showSearch.js"></script>
+    <script defer src="../scripts/showMenu.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -16,15 +16,13 @@
             <div class="logo-box">
               <img
                 class="logo"
-                src="assets/logo/logo-prime-oth.png"
+                src="../assets/logo/logo-prime-oth.png"
                 alt="logo"
               />
             </div>
             <div class="menu-box">
               <div class="menu-box__block">
-                <a class="menu-item" href="pages/catalog.html"
-                  >Bouquets&Flowers</a
-                >
+                <a class="menu-item" href="#">Bouquets&Flowers</a>
                 <a class="menu-item" href="#">Gifts&Cards</a>
                 <a class="menu-item" href="#">Delivery&Payment</a>
                 <a class="menu-item" href="#">About us</a>
@@ -36,7 +34,7 @@
                 type="button"
                 onclick="menuOpen();"
               >
-                <img src="assets/icons/burger24.png" alt="menu" />
+                <img src="../assets/icons/burger24.png" alt="menu" />
               </button>
               <div class="menu-mini">
                 <div class="menu-mini-close">
@@ -44,9 +42,7 @@
                     &#10006;
                   </button>
                 </div>
-                <a class="menu-item" href="pages/catalog.html"
-                  >Bouquets&Flowers</a
-                >
+                <a class="menu-item" href="#">Bouquets&Flowers</a>
                 <a class="menu-item" href="#">Gifts&Cards</a>
                 <a class="menu-item" href="#">Delivery&Payment</a>
                 <a class="menu-item" href="#">About us</a>
@@ -60,17 +56,17 @@
                     type="button"
                     onclick="showSearch();"
                   >
-                    <img src="assets/icons/search24.png" alt="search" />
+                    <img src="../assets/icons/search24.png" alt="search" />
                   </button>
                 </div>
                 <div class="user-box">
                   <button class="service-button" type="button" id="btnUser">
-                    <img src="assets/icons/user24.png" alt="user" />
+                    <img src="../assets/icons/user24.png" alt="user" />
                   </button>
                 </div>
                 <div class="cart-box">
                   <button class="service-button" type="button" id="btnCart">
-                    <img src="assets/icons/cart24.png" alt="cart" />
+                    <img src="../assets/icons/cart24.png" alt="cart" />
                   </button>
                 </div>
               </div>
@@ -98,18 +94,6 @@
         </header>
         <main class="main">
           <section class="hero">
-            <div class="slide">
-              <img
-                class="slide-first"
-                src="assets/slides/slide-2.jpg"
-                alt="slide"
-              />
-              <img
-                class="slide-second"
-                src="assets/slides/slide-3.jpg"
-                alt="slide"
-              />
-            </div>
             <div class="delivery-box">
               <div class="delivery-box__heading">
                 <p class="heading-prime">Choose your delivery here</p>
@@ -125,190 +109,22 @@
               </div>
             </div>
           </section>
-          <section class="featured">
-            <div class="featured__heading">
-              <p class="heading-prime">Featured</p>
-            </div>
-            <div class="featured__block">
-              <div class="product" data-id="1">
-                <div class="product-image" data-id="1">
-                  <img src="assets/catalog/item-1.png" alt="photo" />
-                </div>
-                <div class="product-info" data-id="1">
-                  <a class="product-title" href="pages/product.html"
-                    >Lorem ipsum dolor sit</a
-                  >
-                  <div class="product-price-box">
-                    <p class="price-text">from</p>
-                    <p class="price-value">12</p>
-                    <p class="price-currency">&euro;</p>
-                  </div>
-                </div>
-                <div class="product-button" data-id="1">
-                  <button class="to-cart" type="button">Add to cart</button>
-                </div>
-              </div>
-              <div class="product" data-id="2">
-                <div class="product-image" data-id="2">
-                  <img src="assets/catalog/item-2.png" alt="photo" />
-                </div>
-                <div class="product-info" data-id="2">
-                  <a class="product-title" href="#">Lorem ipsum dolor sit</a>
-                  <div class="product-price-box">
-                    <p class="price-text">from</p>
-                    <p class="price-value">14</p>
-                    <p class="price-currency">&euro;</p>
-                  </div>
-                </div>
-                <div class="product-button" data-id="2">
-                  <button class="to-cart" type="button">Add to cart</button>
-                </div>
-              </div>
-              <div class="product" data-id="3">
-                <div class="product-image" data-id="3">
-                  <img src="assets/catalog/item-3.png" alt="photo" />
-                </div>
-                <div class="product-info" data-id="3">
-                  <a class="product-title" href="#">Lorem ipsum dolor sit</a>
-                  <div class="product-price-box">
-                    <p class="price-text">from</p>
-                    <p class="price-value">5</p>
-                    <p class="price-currency">&euro;</p>
-                  </div>
-                </div>
-                <div class="product-button" data-id="3">
-                  <button class="to-cart" type="button">Add to cart</button>
-                </div>
-              </div>
-              <div class="product" data-id="4">
-                <div class="product-image" data-id="4">
-                  <img src="assets/catalog/item-4.png" alt="photo" />
-                </div>
-                <div class="product-info" data-id="4">
-                  <a class="product-title" href="#">Lorem ipsum dolor sit</a>
-                  <div class="product-price-box">
-                    <p class="price-text">from</p>
-                    <p class="price-value">16</p>
-                    <p class="price-currency">&euro;</p>
-                  </div>
-                </div>
-                <div class="product-button" data-id="4">
-                  <button class="to-cart" type="button">Add to cart</button>
-                </div>
-              </div>
-              <div class="product" data-id="5">
-                <div class="product-image" data-id="5">
-                  <img src="assets/catalog/item-5.png" alt="photo" />
-                </div>
-                <div class="product-info" data-id="5">
-                  <a class="product-title" href="#">Lorem ipsum dolor sit</a>
-                  <div class="product-price-box">
-                    <p class="price-text">from</p>
-                    <p class="price-value">17</p>
-                    <p class="price-currency">&euro;</p>
-                  </div>
-                </div>
-                <div class="product-button" data-id="5">
-                  <button class="to-cart" type="button">Add to cart</button>
-                </div>
+          <section class="catalog">
+            <div class="catalog__heading">
+              <p class="heading-prime">Catalog</p>
+              <div class="filters">
+                <button class="filter-button" id="filterButton" type="button">
+                  <img src="../assets/icons/filter24.png" alt="filter" />
+                </button>
+                <button class="filter-button" id="sortButton" type="button">
+                  <img src="../assets/icons/sort24.png" alt="sort" />
+                </button>
               </div>
             </div>
-          </section>
-          <section class="best-selling">
-            <div class="best-selling__heading">
-              <p class="heading-prime">Best selling</p>
-            </div>
-            <div class="best-selling__block">
-              <div class="product" data-id="6">
-                <div class="product-image" data-id="6">
-                  <img src="assets/catalog/item-6.png" alt="photo" />
-                </div>
-                <div class="product-info" data-id="6">
-                  <a class="product-title" href="#">Lorem ipsum dolor sit</a>
-                  <div class="product-price-box">
-                    <p class="price-text">from</p>
-                    <p class="price-value">18</p>
-                    <p class="price-currency">&euro;</p>
-                  </div>
-                </div>
-                <div class="product-button" data-id="6">
-                  <button class="to-cart" type="button">Add to cart</button>
-                </div>
-              </div>
-              <div class="product" data-id="7">
-                <div class="product-image" data-id="7">
-                  <img src="assets/catalog/item-7.png" alt="photo" />
-                </div>
-                <div class="product-info" data-id="7">
-                  <a class="product-title" href="#">Lorem ipsum dolor sit</a>
-                  <div class="product-price-box">
-                    <p class="price-text">from</p>
-                    <p class="price-value">19</p>
-                    <p class="price-currency">&euro;</p>
-                  </div>
-                </div>
-                <div class="product-button" data-id="7">
-                  <button class="to-cart" type="button">Add to cart</button>
-                </div>
-              </div>
-              <div class="product" data-id="8">
-                <div class="product-image" data-id="8">
-                  <img src="assets/catalog/item-8.png" alt="photo" />
-                </div>
-                <div class="product-info" data-id="8">
-                  <a class="product-title" href="#">Lorem ipsum dolor sit</a>
-                  <div class="product-price-box">
-                    <p class="price-text">from</p>
-                    <p class="price-value">11</p>
-                    <p class="price-currency">&euro;</p>
-                  </div>
-                </div>
-                <div class="product-button" data-id="8">
-                  <button class="to-cart" type="button">Add to cart</button>
-                </div>
-              </div>
-              <div class="product" data-id="9">
-                <div class="product-image" data-id="9">
-                  <img src="assets/catalog/item-9.png" alt="photo" />
-                </div>
-                <div class="product-info" data-id="9">
-                  <a class="product-title" href="#">Lorem ipsum dolor sit</a>
-                  <div class="product-price-box">
-                    <p class="price-text">from</p>
-                    <p class="price-value">19</p>
-                    <p class="price-currency">&euro;</p>
-                  </div>
-                </div>
-                <div class="product-button" data-id="9">
-                  <button class="to-cart" type="button">Add to cart</button>
-                </div>
-              </div>
-              <div class="product" data-id="10">
-                <div class="product-image" data-id="10">
-                  <img src="assets/catalog/item-10.png" alt="photo" />
-                </div>
-                <div class="product-info" data-id="10">
-                  <a class="product-title" href="#">Lorem ipsum dolor sit</a>
-                  <div class="product-price-box">
-                    <p class="price-text">from</p>
-                    <p class="price-value">14</p>
-                    <p class="price-currency">&euro;</p>
-                  </div>
-                </div>
-                <div class="product-button" data-id="10">
-                  <button class="to-cart" type="button">Add to cart</button>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="promo">
-            <div class="promo__heading">
-              <p class="heading-prime">Promo</p>
-            </div>
-            <div class="promo__block">
+            <div class="catalog__block">
               <div class="product" data-id="11">
                 <div class="product-image" data-id="11">
-                  <img src="assets/catalog/item-11.png" alt="photo" />
+                  <img src="../assets/catalog/item-11.png" alt="photo" />
                 </div>
                 <div class="product-info" data-id="11">
                   <a class="product-title" href="#">Lorem ipsum dolor sit</a>
@@ -324,7 +140,7 @@
               </div>
               <div class="product" data-id="12">
                 <div class="product-image" data-id="12">
-                  <img src="assets/catalog/item-12.png" alt="photo" />
+                  <img src="../assets/catalog/item-12.png" alt="photo" />
                 </div>
                 <div class="product-info" data-id="12">
                   <a class="product-title" href="#">Lorem ipsum dolor sit</a>
@@ -340,7 +156,7 @@
               </div>
               <div class="product" data-id="13">
                 <div class="product-image" data-id="13">
-                  <img src="assets/catalog/item-13.png" alt="photo" />
+                  <img src="../assets/catalog/item-13.png" alt="photo" />
                 </div>
                 <div class="product-info" data-id="13">
                   <a class="product-title" href="#">Lorem ipsum dolor sit</a>
@@ -356,7 +172,7 @@
               </div>
               <div class="product" data-id="14">
                 <div class="product-image" data-id="14">
-                  <img src="assets/catalog/item-14.png" alt="photo" />
+                  <img src="../assets/catalog/item-14.png" alt="photo" />
                 </div>
                 <div class="product-info" data-id="14">
                   <a class="product-title" href="#">Lorem ipsum dolor sit</a>
@@ -372,7 +188,7 @@
               </div>
               <div class="product" data-id="15">
                 <div class="product-image" data-id="15">
-                  <img src="assets/catalog/item-15.png" alt="photo" />
+                  <img src="../assets/catalog/item-15.png" alt="photo" />
                 </div>
                 <div class="product-info" data-id="15">
                   <a class="product-title" href="#">Lorem ipsum dolor sit</a>
@@ -386,6 +202,86 @@
                   <button class="to-cart" type="button">Add to cart</button>
                 </div>
               </div>
+              <div class="product" data-id="6">
+                <div class="product-image" data-id="6">
+                  <img src="../assets/catalog/item-6.png" alt="photo" />
+                </div>
+                <div class="product-info" data-id="6">
+                  <a class="product-title" href="#">Lorem ipsum dolor sit</a>
+                  <div class="product-price-box">
+                    <p class="price-text">from</p>
+                    <p class="price-value">18</p>
+                    <p class="price-currency">&euro;</p>
+                  </div>
+                </div>
+                <div class="product-button" data-id="6">
+                  <button class="to-cart" type="button">Add to cart</button>
+                </div>
+              </div>
+              <div class="product" data-id="7">
+                <div class="product-image" data-id="7">
+                  <img src="../assets/catalog/item-7.png" alt="photo" />
+                </div>
+                <div class="product-info" data-id="7">
+                  <a class="product-title" href="#">Lorem ipsum dolor sit</a>
+                  <div class="product-price-box">
+                    <p class="price-text">from</p>
+                    <p class="price-value">19</p>
+                    <p class="price-currency">&euro;</p>
+                  </div>
+                </div>
+                <div class="product-button" data-id="7">
+                  <button class="to-cart" type="button">Add to cart</button>
+                </div>
+              </div>
+              <div class="product" data-id="8">
+                <div class="product-image" data-id="8">
+                  <img src="../assets/catalog/item-8.png" alt="photo" />
+                </div>
+                <div class="product-info" data-id="8">
+                  <a class="product-title" href="#">Lorem ipsum dolor sit</a>
+                  <div class="product-price-box">
+                    <p class="price-text">from</p>
+                    <p class="price-value">11</p>
+                    <p class="price-currency">&euro;</p>
+                  </div>
+                </div>
+                <div class="product-button" data-id="8">
+                  <button class="to-cart" type="button">Add to cart</button>
+                </div>
+              </div>
+              <div class="product" data-id="9">
+                <div class="product-image" data-id="9">
+                  <img src="../assets/catalog/item-9.png" alt="photo" />
+                </div>
+                <div class="product-info" data-id="9">
+                  <a class="product-title" href="#">Lorem ipsum dolor sit</a>
+                  <div class="product-price-box">
+                    <p class="price-text">from</p>
+                    <p class="price-value">19</p>
+                    <p class="price-currency">&euro;</p>
+                  </div>
+                </div>
+                <div class="product-button" data-id="9">
+                  <button class="to-cart" type="button">Add to cart</button>
+                </div>
+              </div>
+              <div class="product" data-id="10">
+                <div class="product-image" data-id="10">
+                  <img src="../assets/catalog/item-10.png" alt="photo" />
+                </div>
+                <div class="product-info" data-id="10">
+                  <a class="product-title" href="#">Lorem ipsum dolor sit</a>
+                  <div class="product-price-box">
+                    <p class="price-text">from</p>
+                    <p class="price-value">14</p>
+                    <p class="price-currency">&euro;</p>
+                  </div>
+                </div>
+                <div class="product-button" data-id="10">
+                  <button class="to-cart" type="button">Add to cart</button>
+                </div>
+              </div>
             </div>
           </section>
         </main>
@@ -393,7 +289,7 @@
       <footer class="footer">
         <section class="footer-top">
           <div class="footer-logo">
-            <img src="assets/logo/logo-white-oth.png" alt="logo" />
+            <img src="../assets/logo/logo-white-oth.png" alt="logo" />
           </div>
           <div class="footer-contacts">
             <p class="contact">+098-765-4321</p>
@@ -417,16 +313,16 @@
           <div class="footer-socials">
             <div class="socials">
               <a class="social-item" href="#"
-                ><img src="assets/icons/socials/facebook36.png" alt="fb"
+                ><img src="../assets/icons/socials/facebook36.png" alt="fb"
               /></a>
               <a class="social-item" href="#"
-                ><img src="assets/icons/socials/instagram36.png" alt="ins"
+                ><img src="../assets/icons/socials/instagram36.png" alt="ins"
               /></a>
               <a class="social-item" href="#"
-                ><img src="assets/icons/socials/telegram36.png" alt="tel"
+                ><img src="../assets/icons/socials/telegram36.png" alt="tel"
               /></a>
               <a class="social-item" href="#"
-                ><img src="assets/icons/socials/whatsapp36.png" alt="wa"
+                ><img src="../assets/icons/socials/whatsapp36.png" alt="wa"
               /></a>
             </div>
           </div>

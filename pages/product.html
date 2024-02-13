@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flowers.product</title>
+    <link rel="stylesheet" href="../styles/product/product.css" />
+    <script defer src="../scripts/showSearch.js"></script>
+    <script defer src="../scripts/showMenu.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="top">
+        <header class="header">
+          <section class="header-top">
+            <div class="logo-box">
+              <img
+                class="logo"
+                src="../assets/logo/logo-prime-oth.png"
+                alt="logo"
+              />
+            </div>
+            <div class="menu-box">
+              <div class="menu-box__block">
+                <a class="menu-item" href="#">Bouquets&Flowers</a>
+                <a class="menu-item" href="#">Gifts&Cards</a>
+                <a class="menu-item" href="#">Delivery&Payment</a>
+                <a class="menu-item" href="#">About us</a>
+              </div>
+            </div>
+            <div class="menu-mini-box">
+              <button
+                class="menu-mini-button"
+                type="button"
+                onclick="menuOpen();"
+              >
+                <img src="../assets/icons/burger24.png" alt="menu" />
+              </button>
+              <div class="menu-mini">
+                <div class="menu-mini-close">
+                  <button class="close-button" onclick="menuClose();">
+                    &#10006;
+                  </button>
+                </div>
+                <a class="menu-item" href="#">Bouquets&Flowers</a>
+                <a class="menu-item" href="#">Gifts&Cards</a>
+                <a class="menu-item" href="#">Delivery&Payment</a>
+                <a class="menu-item" href="#">About us</a>
+              </div>
+            </div>
+            <div class="services-box">
+              <div class="services-box__block">
+                <div class="search-box">
+                  <button
+                    class="service-button to-search"
+                    type="button"
+                    onclick="showSearch();"
+                  >
+                    <img src="../assets/icons/search24.png" alt="search" />
+                  </button>
+                </div>
+                <div class="user-box">
+                  <button class="service-button" type="button" id="btnUser">
+                    <img src="../assets/icons/user24.png" alt="user" />
+                  </button>
+                </div>
+                <div class="cart-box">
+                  <button class="service-button" type="button" id="btnCart">
+                    <img src="../assets/icons/cart24.png" alt="cart" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="header-bottom">
+            <div class="search-input-box">
+              <input
+                class="search-input"
+                type="text"
+                placeholder="Enter your searching here..."
+              />
+              <button class="search-button" id="btnSearch" type="button">
+                &#9658;
+              </button>
+              <button
+                class="search-close"
+                type="button"
+                onclick="closeSearch();"
+              >
+                &#10006;
+              </button>
+            </div>
+          </section>
+        </header>
+        <main class="main">
+          <section class="product-block">
+            <div class="product" data-id="11">
+              <div class="product-image" data-id="11">
+                <img src="../assets/catalog/item-11.png" alt="photo" />
+              </div>
+              <div class="product-box">
+                <div class="product-info" data-id="11">
+                  <a class="product-title" href="#">Lorem ipsum dolor sit</a>
+                  <p class="product-description">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Expedita repellat harum vitae sequi deleniti rem eveniet
+                    voluptas suscipit hic labore! Lorem, ipsum dolor sit amet
+                    consectetur adipisicing elit. Expedita repellat harum vitae
+                    sequi deleniti rem eveniet voluptas suscipit hic labore!
+                  </p>
+                  <div class="product-choose-box">
+                    <div class="product-choose">
+                      <div class="choose-input">
+                        <input
+                          type="radio"
+                          name="product"
+                          value="choose-1"
+                          checked
+                        />
+                        <label for="choose-1">Big</label>
+                      </div>
+                      <p class="choose-text">
+                        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet
+                      </p>
+                      <div class="product-price-box">
+                        <p class="price-value">18</p>
+                        <p class="price-currency">&euro;</p>
+                      </div>
+                    </div>
+                    <div class="product-choose">
+                      <div class="choose-input">
+                        <input type="radio" name="product" value="choose-2" />
+                        <label for="choose-2">Middle</label>
+                      </div>
+                      <p class="choose-text">
+                        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet
+                      </p>
+                      <div class="product-price-box">
+                        <p class="price-value">15</p>
+                        <p class="price-currency">&euro;</p>
+                      </div>
+                    </div>
+                    <div class="product-choose">
+                      <div class="choose-input">
+                        <input type="radio" name="product" value="choose-3" />
+                        <label for="choose-3">Small</label>
+                      </div>
+                      <p class="choose-text">Lorem ipsum dolor sit amet.</p>
+                      <div class="product-price-box">
+                        <p class="price-value">12</p>
+                        <p class="price-currency">&euro;</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-purchase" data-id="11">
+                  <div class="counter-box">
+                    <div class="counter">
+                      <button class="counter-minus">-</button>
+                      <input class="counter-value" type="text" value="1" />
+                      <button class="counter-plus">+</button>
+                    </div>
+                  </div>
+                  <div class="total-box">
+                    <div class="total-price">
+                      <p class="total-text">Total price:</p>
+                      <p class="total-value">18</p>
+                      <p class="total-currency">&euro;</p>
+                    </div>
+                  </div>
+                  <button class="buy-button" type="button">Buy</button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="featured">
+            <div class="featured__heading">
+              <p class="heading-prime">Also see items</p>
+            </div>
+            <div class="featured__block">
+              <div class="product" data-id="11">
+                <div class="product-image" data-id="11">
+                  <img src="../assets/catalog/item-11.png" alt="photo" />
+                </div>
+                <div class="product-info" data-id="11">
+                  <a class="product-title" href="#">Lorem ipsum dolor sit</a>
+                  <div class="product-price-box">
+                    <p class="price-text">from</p>
+                    <p class="price-value">12</p>
+                    <p class="price-currency">&euro;</p>
+                  </div>
+                </div>
+                <div class="product-button" data-id="11">
+                  <button class="to-cart" type="button">Add to cart</button>
+                </div>
+              </div>
+              <div class="product" data-id="12">
+                <div class="product-image" data-id="12">
+                  <img src="../assets/catalog/item-12.png" alt="photo" />
+                </div>
+                <div class="product-info" data-id="12">
+                  <a class="product-title" href="#">Lorem ipsum dolor sit</a>
+                  <div class="product-price-box">
+                    <p class="price-text">from</p>
+                    <p class="price-value">22</p>
+                    <p class="price-currency">&euro;</p>
+                  </div>
+                </div>
+                <div class="product-button" data-id="12">
+                  <button class="to-cart" type="button">Add to cart</button>
+                </div>
+              </div>
+              <div class="product" data-id="13">
+                <div class="product-image" data-id="13">
+                  <img src="../assets/catalog/item-13.png" alt="photo" />
+                </div>
+                <div class="product-info" data-id="13">
+                  <a class="product-title" href="#">Lorem ipsum dolor sit</a>
+                  <div class="product-price-box">
+                    <p class="price-text">from</p>
+                    <p class="price-value">23</p>
+                    <p class="price-currency">&euro;</p>
+                  </div>
+                </div>
+                <div class="product-button" data-id="13">
+                  <button class="to-cart" type="button">Add to cart</button>
+                </div>
+              </div>
+              <div class="product" data-id="14">
+                <div class="product-image" data-id="14">
+                  <img src="../assets/catalog/item-14.png" alt="photo" />
+                </div>
+                <div class="product-info" data-id="14">
+                  <a class="product-title" href="#">Lorem ipsum dolor sit</a>
+                  <div class="product-price-box">
+                    <p class="price-text">from</p>
+                    <p class="price-value">24</p>
+                    <p class="price-currency">&euro;</p>
+                  </div>
+                </div>
+                <div class="product-button" data-id="14">
+                  <button class="to-cart" type="button">Add to cart</button>
+                </div>
+              </div>
+              <div class="product" data-id="15">
+                <div class="product-image" data-id="15">
+                  <img src="../assets/catalog/item-15.png" alt="photo" />
+                </div>
+                <div class="product-info" data-id="15">
+                  <a class="product-title" href="#">Lorem ipsum dolor sit</a>
+                  <div class="product-price-box">
+                    <p class="price-text">from</p>
+                    <p class="price-value">17</p>
+                    <p class="price-currency">&euro;</p>
+                  </div>
+                </div>
+                <div class="product-button" data-id="15">
+                  <button class="to-cart" type="button">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+      <footer class="footer">
+        <section class="footer-top">
+          <div class="footer-logo">
+            <img src="../assets/logo/logo-white-oth.png" alt="logo" />
+          </div>
+          <div class="footer-contacts">
+            <p class="contact">+098-765-4321</p>
+            <p class="contact">qwe.asd@kukkameri.coms</p>
+          </div>
+          <div class="footer-menu">
+            <div class="menu-box">
+              <a class="menu-item" href="#">Bouquets&Flowers</a>
+              <a class="menu-item" href="#">Gifts&Cards</a>
+              <a class="menu-item" href="#">Delivery&Payment</a>
+              <a class="menu-item" href="#">About us</a>
+            </div>
+          </div>
+        </section>
+        <section class="footer-bottom">
+          <div class="footer-rights">
+            <p class="rights">
+              Kukkameri ltd.&nbsp;&#169;&nbsp;All rights reserved
+            </p>
+          </div>
+          <div class="footer-socials">
+            <div class="socials">
+              <a class="social-item" href="#"
+                ><img src="../assets/icons/socials/facebook36.png" alt="fb"
+              /></a>
+              <a class="social-item" href="#"
+                ><img src="../assets/icons/socials/instagram36.png" alt="ins"
+              /></a>
+              <a class="social-item" href="#"
+                ><img src="../assets/icons/socials/telegram36.png" alt="tel"
+              /></a>
+              <a class="social-item" href="#"
+                ><img src="../assets/icons/socials/whatsapp36.png" alt="wa"
+              /></a>
+            </div>
+          </div>
+        </section>
+      </footer>
+    </div>
+  </body>
+</html>
