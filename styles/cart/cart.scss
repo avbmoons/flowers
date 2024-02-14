@@ -1,5 +1,7 @@
 @use "sass:math";
 
+@import "../header/header.scss";
+@import "../footer/footer.scss";
 @import "../vars/vars.scss";
 
 * {
@@ -26,220 +28,7 @@ body {
     justify-content: space-between;
     flex-grow: 1;
     .header {
-      margin: 0 auto;
-      width: 100%;
-      height: $header-height;
-      @include flex-vertical();
-      justify-content: space-between;
-      .header-top {
-        margin: 0 auto;
-        width: 100%;
-        height: $header-top-height;
-        @include flex-horizontal();
-        justify-content: space-between;
-        .logo-box {
-          margin: auto;
-          width: 20%;
-          height: 70%;
-          @include flex-vertical();
-          align-items: start;
-          //border: 1px solid red;
-          .logo {
-            margin: 0 auto;
-            width: auto;
-            height: 100%;
-            //border: 1px solid green;
-          }
-        }
-        .menu-box {
-          margin: auto;
-          width: 60%;
-          height: 70%;
-          @include flex-vertical();
-          @media only screen and (max-width: 1023px) {
-            display: none;
-          }
-          //border: 1px solid red;
-          &__block {
-            margin: 0 auto;
-            width: 100%;
-            height: 100%;
-            @include flex-horizontal();
-            .menu-item {
-              margin: auto;
-              width: fit-content;
-              text-decoration: none;
-              @include text-font(16px, 500, 16px, 0%);
-              color: $color-down;
-            }
-            .menu-item:hover {
-              color: $color-hover-accent;
-            }
-          }
-        }
-        .menu-mini-box {
-          margin: auto;
-          width: auto;
-          height: auto;
-          @include flex-vertical();
-          position: relative;
-          @media only screen and (min-width: 1024px) {
-            display: none;
-          }
-          .menu-mini-button {
-            width: fit-content;
-            height: 70%;
-            background: none;
-            border: none;
-            outline: none;
-            cursor: pointer;
-          }
-          .menu-mini {
-            margin: 0 auto;
-            padding: 10px;
-            width: 50vw; // fit-content;
-            min-height: $header-height * 1.5;
-            position: absolute;
-            top: $header-top-height * 0.8;
-            left: -5px;
-            float: left;
-            @include flex-vertical();
-            display: none;
-            justify-content: space-between;
-            background-color: rgba($color: $color-prime, $alpha: 0.9);
-            z-index: 99;
-            .menu-mini-close {
-              width: 100%;
-              @include flex-horizontal();
-              justify-content: flex-end;
-              .close-button {
-                width: fit-content;
-                @include text-font(16px, 500, 16px, 0%);
-                color: $color-accent;
-                text-align: right;
-                background: none;
-                border: none;
-                outline: none;
-                cursor: pointer;
-              }
-            }
-            .menu-item {
-              margin: 0;
-              width: fit-content;
-              text-decoration: none;
-              @include text-font(16px, 500, 16px, 0%);
-              color: white;
-            }
-            .menu-item:hover {
-              color: $color-hover-accent;
-            }
-          }
-          .menu-mini-box:hover .menu-mini {
-            display: flex;
-          }
-        }
-        .services-box {
-          margin: auto;
-          width: 20%;
-          height: 70%;
-          @include flex-vertical();
-          //border: 1px solid red;
-          &__block {
-            margin: 0 auto;
-            width: 100%;
-            height: 100%;
-            @include flex-horizontal();
-            justify-content: flex-end;
-            .search-box,
-            .user-box,
-            .cart-box {
-              margin: auto 0;
-              margin-left: 2%;
-              width: auto;
-              height: 100%;
-              @include flex-vertical();
-              .service-button {
-                margin: auto;
-                height: 100%;
-                background: none;
-                border: 1px solid white;
-                outline: none;
-                @include flex-vertical();
-                img {
-                  margin: auto;
-                  width: auto;
-                  height: fit-content;
-                  padding: 5px;
-                }
-              }
-              .service-button:focus {
-                border: 1px solid $color-prime;
-                border-radius: 5px;
-                box-sizing: border-box;
-              }
-            }
-          }
-        }
-      }
-      .header-bottom {
-        margin: 0 auto;
-        width: 100%;
-        height: $header-top-height;
-        @include flex-vertical();
-        background-color: $color-prime;
-        .search-input-box {
-          margin: 0 auto;
-          //margin-left: 2%;
-          width: 60%;
-          height: 70%;
-          @media only screen and (max-width: 1023px) {
-            width: 80%;
-          }
-          @include flex-horizontal();
-          display: none;
-          //border: 1px solid red;
-          .search-input {
-            padding-left: 10px;
-            width: 90%;
-            height: 100%;
-            @media only screen and (max-width: 1023px) {
-              width: 80%;
-            }
-            border: none; // 1px solid $color-prime-dark;
-            outline: $color-down-dark;
-            @include text-font(14px, 400, 14px, 0%);
-            color: $color-font;
-          }
-          .search-input::placeholder {
-            @include text-font(14px, 400, 14px, 0%);
-            color: $color-down-light;
-          }
-          .search-button {
-            width: 5%;
-            height: 100%;
-            @media only screen and (max-width: 1023px) {
-              width: 10%;
-            }
-            border: none;
-            outline: none;
-            background-color: $color-prime-dark;
-            @include text-font(16px, 400, 16px, 0%);
-            color: white;
-          }
-          .search-close {
-            width: 5%;
-            height: 100%;
-            @media only screen and (max-width: 1023px) {
-              width: 10%;
-            }
-            border: none;
-            outline: none;
-            background-color: $color-prime-dark;
-            @include text-font(16px, 400, 16px, 0%);
-            color: $color-accent;
-          }
-        }
-      }
+      @include header();
     }
     .main {
       margin: 0 auto;
@@ -247,167 +36,307 @@ body {
       min-height: $main-min-height;
       @include flex-vertical();
       justify-content: flex-start;
-      .hero {
+      .cart-list {
         margin: 0 auto;
-        width: 100%;
-        max-height: $slide-height;
+        margin-bottom: 1%;
+        width: $block-width;
+        min-height: $slide-height * 0.9;
         @include flex-vertical();
         justify-content: flex-start;
-        //border: 2px solid red;
-        .delivery-box {
+        &__heading {
           margin: 0 auto;
-          width: $block-width;
-          @include flex-vertical();
+          margin-bottom: 20px;
+          width: 100%;
+          height: fit-content;
           //border: 1px solid red;
-          &__heading {
+          @include flex-horizontal();
+          justify-content: space-between;
+          .heading-prime {
+            padding: 10px;
+            @include text-font(20px, 600, 20px, 0%);
+            color: $color-down;
+            //border: 2px solid blue;
+          }
+        }
+        .product {
+          margin: 0 auto;
+          margin-bottom: 1%;
+          width: 100%;
+          height: $cart-item-height; // 100%;
+          @include flex-horizontal();
+          justify-content: space-between;
+          //border: 2px solid blue;
+          border: 1px solid gray;
+
+          .product-image {
             margin: 0 auto;
-            margin-bottom: 10px;
-            .heading-prime {
-              padding: 10px;
-              @include text-font(20px, 600, 20px, 0%);
-              color: $color-down;
-              text-align: center;
+            width: auto;
+            height: 100%;
+            //border: 1px solid orange;
+            img {
+              margin: auto;
+              width: auto;
+              height: 100%;
             }
           }
-          &__order {
+          .product-box {
             margin: 0 auto;
-            width: 100%;
+            min-width: 80%;
+            //width: auto;
+            height: 100%;
             @include flex-horizontal();
-            .delivery-input {
-              height: $header-bottom-height * 0.8;
+            justify-content: space-evenly;
+            //border: 2px solid green;
+
+            .product-info {
+              margin: auto 0;
+              //padding: 1% 5%;
+              width: 50%; // inherit;
+              height: 70%;
+              @include flex-horizontal();
+              justify-content: space-evenly;
+              //border: 1px solid red;
+              .product-title {
+                margin: auto 0;
+                //margin-bottom: 2%;
+                width: 50%; //;
+                height: 100%; // 20%;
+                @include flex-vertical();
+                text-decoration: none;
+                @include text-font(22px, 500, 22px, 0%);
+                color: $color-prime;
+                //border: 1px solid violet;
+              }
+              .product-choose-box {
+                margin: auto 0;
+                width: 50%; // 100%;
+                height: 100%; // 30%; //fit-content;
+                @include flex-vertical();
+                //justify-content: flex-start;
+                //border: 1px solid violet;
+                .product-choose {
+                  margin: auto 0;
+                  width: 90%; // 33%;
+                  height: 100%;
+                  @include flex-horizontal();
+                  justify-content: space-between;
+                  //border: 1px solid green;
+                  .choose-input {
+                    margin: auto; // 0 auto;
+                    //margin-bottom: 10px;
+                    width: 50%; // fit-content; // 100%;
+                    height: 70%; // 20%;
+                    @include flex-horizontal();
+                    //border: 1px solid orange;
+                    label {
+                      margin: auto; // 0;
+                      margin-left: 20px;
+                      @include text-font(16px, 600, 16px, 0%);
+                      color: $color-font;
+                    }
+                  }
+                  .product-price-box {
+                    margin: auto; // 0 auto; // 0; // auto 0;
+                    width: 50%; // 100%;
+                    height: 70%; // fit-content;
+                    @include flex-horizontal();
+                    //justify-content: flex-start;
+                    //border: 1px solid orange;
+                    .price-value {
+                      margin: auto 0;
+                      margin-right: 2%;
+                      @include text-font(18px, 600, 22px, 0%);
+                    }
+                    .price-currency {
+                      margin: auto 0;
+                      //margin-right: 2%;
+                      @include text-font(16px, 600, 20px, 0%);
+                    }
+                  }
+                }
+              }
             }
-            .delivery-input::placeholder {
-              padding-left: 10px;
-              color: $color-down-light;
-            }
-            .delivery-address {
-              width: 40%;
+            .product-purchase {
+              margin: auto 0;
+              //padding: 1% 5%;
+              //padding-left: 3%;
+              width: 50%; // inherit;
+              height: 70%; // 30%;
+              @include flex-horizontal();
+              justify-content: flex-start;
+              //border: 1px solid red;
+              .counter-box {
+                margin: auto;
+                width: 25%; // 40%;
+                height: 30%;
+                @include flex-vertical();
+                //border: 1px solid violet;
+                .counter {
+                  margin: 0 auto;
+                  width: 75%;
+                  height: fit-content;
+                  vertical-align: middle;
+                  @include flex-horizontal();
+                  .counter-minus {
+                    width: 25%;
+                    @include text-font(22px, 300, 22px, 0%);
+                    color: $color-font;
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                  }
+                  .counter-value {
+                    width: 50%;
+                    @include text-font(20px, 300, 20px, 0%); // font-mix();
+                    text-align: center;
+                    color: $color-font;
+                    //background-color: $color-background;
+                    border: none;
+                  }
+                  .counter-plus {
+                    width: 25%;
+                    @include text-font(22px, 300, 22px, 0%);
+                    color: $color-font;
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                  }
+                  .counter-minus:hover {
+                    color: $color-accent;
+                  }
+                  .counter-plus:hover {
+                    color: $color-accent;
+                  }
+                }
+              }
+              .total-box {
+                margin: auto;
+                width: 40%; // 40%; // fit-content; // 20%;
+                height: 30%;
+                @include flex-vertical();
+                //border: 1px solid violet;
+                .total-price {
+                  margin: 0 auto;
+                  width: 100%; // 75%;
+                  height: fit-content;
+                  vertical-align: middle;
+                  @include flex-horizontal();
+                  .total-text {
+                    margin: auto 0;
+                    margin-right: 5%;
+                    width: 30%;
+                    @include text-font(18px, 600, 18px, 0%);
+                    //border: 1px solid violet;
+                  }
+                  .total-value {
+                    margin: auto 0;
+                    margin-right: 2%;
+                    width: 60%;
+                    @include text-font(18px, 600, 18px, 0%);
+                    text-align: right;
+                    //border: 1px solid violet;
+                  }
+                  .total-currency {
+                    margin: auto 0;
+                    //margin-right: 2%;
+                    width: 10%;
+                    @include text-font(18px, 600, 18px, 0%);
+                    //border: 1px solid violet;
+                  }
+                }
+              }
+              .buy-button {
+                margin: auto;
+                margin-left: 1%;
+                padding: 2% 7%;
+                width: 25%;
+                height: 30%;
+                background-color: $color-down;
+                border: none;
+                outline: none;
+                @include text-font(18px, 500, 18px, 0%);
+                color: white;
+                cursor: pointer;
+              }
+              .buy-button:hover {
+                background-color: $color-hover;
+              }
+              .buy-button:focus {
+                background-color: $color-hover;
+                color: $color-hover-accent;
+              }
+              .close-button {
+                margin: auto;
+                width: 10%;
+                height: 30%;
+                background: none;
+                border: none;
+                outline: none;
+                @include text-font(18px, 500, 18px, 0%);
+                color: $color-accent;
+                cursor: pointer;
+              }
+              .close-button:hover {
+                color: $color-prime;
+              }
+              .close-button:focus {
+                border: 1px solid $color-font;
+                border-radius: 5px;
+                color: $color-prime;
+              }
             }
           }
+        }
+      }
+      .cart-total {
+        margin: 0 auto;
+        margin-bottom: 2%;
+        width: $block-width;
+        height: auto;
+        @include flex-vertical();
+        &__block {
+          margin: 0 auto;
+          margin-bottom: 1%;
+          width: 100%;
+          height: auto;
+          @include flex-horizontal();
+          justify-content: flex-end;
+          .grandtotal-text {
+            @include text-font(22px, 500, 22px, 0%);
+          }
+          .grandtotal-value {
+            margin-left: 1%;
+            @include text-font(24px, 600, 24px, 0%);
+          }
+          .grandtotal-currency {
+            margin-left: 1%;
+            @include text-font(22px, 500, 22px, 0%);
+          }
+        }
+        .total-button {
+          margin: auto 0;
+          padding: 1% 2%;
+          width: 12vw;
+          height: auto;
+          align-self: self-end;
+          background-color: $color-prime;
+          border: none;
+          outline: none;
+          @include text-font(20px, 500, 20px, 0%);
+          color: white;
+          cursor: pointer;
+        }
+        .total-button:hover {
+          background-color: $color-hover;
+        }
+        .total-button:focus {
+          background-color: $color-hover;
+          color: $color-hover-accent;
         }
       }
     }
   }
   .footer {
-    margin: 0 auto;
-    width: 100%;
-    height: $footer-height;
-    @media only screen and (max-width: 1023px) {
-      height: 30vh;
-    }
-    @include flex-vertical();
-    justify-content: space-between;
-    background-color: $color-down;
-    .footer-top {
-      margin: 0 auto;
-      padding-left: 2%;
-      padding-right: 2%;
-      width: 100%;
-      height: 60%;
-      @include flex-horizontal();
-      @media only screen and (max-width: 1023px) {
-        @include flex-vertical();
-      }
-      justify-content: space-between;
-      //border: 1px solid yellow;
-      .footer-logo {
-        margin: auto 0;
-        width: fit-content;
-        height: 70%;
-        @media only screen and (max-width: 1023px) {
-          height: 30%;
-        }
-        @include flex-vertical();
-        //border: 1px solid orange;
-        img {
-          margin: auto;
-          height: 100%;
-        }
-      }
-      .footer-contacts {
-        margin: auto 0;
-        width: fit-content;
-        height: 70%;
-        @include flex-vertical();
-        .contact {
-          @include text-font(14px, 400, 14px, 0%);
-          color: white;
-        }
-      }
-      .footer-menu {
-        margin: auto 0;
-        width: fit-content;
-        height: 70%;
-        @include flex-vertical();
-        //border: 1px solid orange;
-        .menu-box {
-          margin: auto 0;
-          height: 70%;
-          @include flex-horizontal();
-          justify-content: flex-end;
-          flex-wrap: wrap;
-          //border: 1px solid yellow;
-          .menu-item {
-            margin: auto;
-            margin-left: 10px;
-            text-decoration: none;
-            @include text-font(14px, 400, 14px, 0%);
-            color: white;
-          }
-          .menu-item:hover {
-            color: $color-down-accent;
-          }
-        }
-      }
-    }
-    .footer-bottom {
-      margin: 0 auto;
-      padding-left: 2%;
-      padding-right: 2%;
-      width: 100%;
-      height: 40%;
-      @include flex-horizontal();
-      @media only screen and (max-width: 1023px) {
-        @include flex-vertical();
-      }
-      justify-content: space-between;
-      //border: 1px solid yellowgreen;
-      .footer-rights {
-        margin: auto 0;
-        width: fit-content;
-        height: 70%;
-        @media only screen and (max-width: 1023px) {
-          height: 30%;
-        }
-        @include flex-vertical();
-        .rights {
-          @include text-font(14px, 400, 14px, 0%);
-          color: white;
-        }
-      }
-      .footer-socials {
-        margin: auto 0;
-        width: fit-content;
-        height: 70%;
-        @media only screen and (max-width: 1023px) {
-          height: 40%;
-        }
-        @include flex-vertical();
-        .socials {
-          margin: auto;
-          height: 100%;
-          @include flex-horizontal();
-          justify-content: flex-end;
-          flex-wrap: wrap;
-          .social-item {
-            margin-left: 10px;
-            height: 100%;
-            img {
-              height: inherit;
-            }
-          }
-        }
-      }
-    }
+    @include footer();
   }
 }

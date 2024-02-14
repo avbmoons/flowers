@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>header</title>
+    <link rel="stylesheet" href="../styles/header/header.css" />
+    <script defer src="../scripts/showSearch.js"></script>
+    <script defer src="../scripts/showMenu.js"></script>
+    <script src="../scripts/toCart.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <section class="header-top">
+        <div class="logo-box">
+          <a class="logo" href="../index.html">
+            <img
+              class="logo"
+              src="../assets/logo/logo-prime-oth.png"
+              alt="logo"
+            />
+          </a>
+        </div>
+        <div class="menu-box">
+          <div class="menu-box__block">
+            <a class="menu-item" href="../pages/catalog.html"
+              >Bouquets&Flowers</a
+            >
+            <a class="menu-item" href="../pages/catalog.html">Gifts&Cards</a>
+            <a class="menu-item" href="../pages/terms.html">Delivery&Payment</a>
+            <a class="menu-item" href="../pages/about.html">About us</a>
+          </div>
+        </div>
+        <div class="menu-mini-box">
+          <button class="menu-mini-button" type="button" onclick="menuOpen();">
+            <img src="../assets/icons/burger24-2.png" alt="menu" />
+          </button>
+          <div class="menu-mini">
+            <div class="menu-mini-close">
+              <button class="close-button" onclick="menuClose();">
+                &#10006;
+              </button>
+            </div>
+            <a class="menu-item" href="../pages/catalog.html"
+              >Bouquets&Flowers</a
+            >
+            <a class="menu-item" href="../pages/catalog.html">Gifts&Cards</a>
+            <a class="menu-item" href="../pages/terms.html">Delivery&Payment</a>
+            <a class="menu-item" href="../pages/about.html">About us</a>
+          </div>
+        </div>
+        <div class="services-box">
+          <div class="services-box__block">
+            <div class="search-box">
+              <button
+                class="service-button to-search"
+                type="button"
+                onclick="showSearch();"
+              >
+                <img src="../assets/icons/search24.png" alt="search" />
+              </button>
+            </div>
+            <div class="user-box">
+              <button class="service-button" type="button" id="btnUser">
+                <img src="../assets/icons/user24.png" alt="user" />
+              </button>
+            </div>
+            <div class="cart-box">
+              <button
+                class="service-button"
+                type="button"
+                id="btnCart"
+                onclick="toCart();"
+              >
+                <img src="../assets/icons/cart24.png" alt="cart" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="header-bottom">
+        <div class="search-input-box">
+          <input
+            class="search-input"
+            type="text"
+            placeholder="Enter your searching here..."
+          />
+          <button class="search-button" id="btnSearch" type="button">
+            &#9658;
+          </button>
+          <button class="search-close" type="button" onclick="closeSearch();">
+            &#10006;
+          </button>
+        </div>
+      </section>
+    </header>
+  </body>
+</html>

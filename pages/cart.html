@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../styles/cart/cart.css" />
     <script defer src="../scripts/showSearch.js"></script>
     <script defer src="../scripts/showMenu.js"></script>
+    <script src="../scripts/toCart.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -14,18 +15,26 @@
         <header class="header">
           <section class="header-top">
             <div class="logo-box">
-              <img
-                class="logo"
-                src="../assets/logo/logo-prime-oth.png"
-                alt="logo"
-              />
+              <a class="logo" href="../index.html">
+                <img
+                  class="logo"
+                  src="../assets/logo/logo-prime-oth.png"
+                  alt="logo"
+                />
+              </a>
             </div>
             <div class="menu-box">
               <div class="menu-box__block">
-                <a class="menu-item" href="#">Bouquets&Flowers</a>
-                <a class="menu-item" href="#">Gifts&Cards</a>
-                <a class="menu-item" href="#">Delivery&Payment</a>
-                <a class="menu-item" href="#">About us</a>
+                <a class="menu-item" href="../pages/catalog.html"
+                  >Bouquets&Flowers</a
+                >
+                <a class="menu-item" href="../pages/catalog.html"
+                  >Gifts&Cards</a
+                >
+                <a class="menu-item" href="../pages/terms.html"
+                  >Delivery&Payment</a
+                >
+                <a class="menu-item" href="../pages/about.html">About us</a>
               </div>
             </div>
             <div class="menu-mini-box">
@@ -34,7 +43,7 @@
                 type="button"
                 onclick="menuOpen();"
               >
-                <img src="../assets/icons/burger24.png" alt="menu" />
+                <img src="../assets/icons/burger24-2.png" alt="menu" />
               </button>
               <div class="menu-mini">
                 <div class="menu-mini-close">
@@ -42,10 +51,16 @@
                     &#10006;
                   </button>
                 </div>
-                <a class="menu-item" href="#">Bouquets&Flowers</a>
-                <a class="menu-item" href="#">Gifts&Cards</a>
-                <a class="menu-item" href="#">Delivery&Payment</a>
-                <a class="menu-item" href="#">About us</a>
+                <a class="menu-item" href="../pages/catalog.html"
+                  >Bouquets&Flowers</a
+                >
+                <a class="menu-item" href="../pages/catalog.html"
+                  >Gifts&Cards</a
+                >
+                <a class="menu-item" href="../pages/terms.html"
+                  >Delivery&Payment</a
+                >
+                <a class="menu-item" href="../pages/about.html">About us</a>
               </div>
             </div>
             <div class="services-box">
@@ -65,7 +80,12 @@
                   </button>
                 </div>
                 <div class="cart-box">
-                  <button class="service-button" type="button" id="btnCart">
+                  <button
+                    class="service-button"
+                    type="button"
+                    id="btnCart"
+                    onclick="toCart();"
+                  >
                     <img src="../assets/icons/cart24.png" alt="cart" />
                   </button>
                 </div>
@@ -93,28 +113,222 @@
           </section>
         </header>
         <main class="main">
-          <section class="hero">
-            <div class="delivery-box">
-              <div class="delivery-box__heading">
-                <p class="heading-prime">Choose your delivery here</p>
+          <section class="cart-list">
+            <div class="cart-list__heading">
+              <p class="heading-prime">Your shopping list</p>
+            </div>
+            <div class="product" data-id="11">
+              <div class="product-image" data-id="11">
+                <img src="../assets/catalog/item-11.png" alt="photo" />
               </div>
-              <div class="delivery-box__order">
-                <input
-                  class="delivery-input delivery-address"
-                  type="text"
-                  placeholder="Enter delivery address..."
-                />
-                <!-- <input class="delivery-input" type="date" /> -->
-                <input class="delivery-input" type="datetime-local" />
+              <div class="product-box">
+                <div class="product-info" data-id="11">
+                  <a class="product-title" href="#">Lorem ipsum dolor sit</a>
+                  <div class="product-choose-box">
+                    <div class="product-choose">
+                      <div class="choose-input">
+                        <input
+                          type="radio"
+                          name="item-11"
+                          value="choose-1"
+                          checked
+                        />
+                        <label for="choose-1">Big</label>
+                      </div>
+                      <div class="product-price-box">
+                        <p class="price-value">18</p>
+                        <p class="price-currency">&euro;</p>
+                      </div>
+                    </div>
+                    <div class="product-choose">
+                      <div class="choose-input">
+                        <input type="radio" name="item-11" value="choose-2" />
+                        <label for="choose-2">Middle</label>
+                      </div>
+                      <div class="product-price-box">
+                        <p class="price-value">15</p>
+                        <p class="price-currency">&euro;</p>
+                      </div>
+                    </div>
+                    <div class="product-choose">
+                      <div class="choose-input">
+                        <input type="radio" name="item-11" value="choose-3" />
+                        <label for="choose-3">Small</label>
+                      </div>
+                      <div class="product-price-box">
+                        <p class="price-value">12</p>
+                        <p class="price-currency">&euro;</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-purchase" data-id="11">
+                  <div class="counter-box">
+                    <div class="counter">
+                      <button class="counter-minus">-</button>
+                      <input class="counter-value" type="text" value="1" />
+                      <button class="counter-plus">+</button>
+                    </div>
+                  </div>
+                  <div class="total-box">
+                    <div class="total-price">
+                      <p class="total-text">Total price:</p>
+                      <p class="total-value">18</p>
+                      <p class="total-currency">&euro;</p>
+                    </div>
+                  </div>
+                  <!-- <button class="buy-button" type="button">Buy</button> -->
+                  <button class="close-button">&#10006;</button>
+                </div>
               </div>
             </div>
+            <div class="product" data-id="12">
+              <div class="product-image" data-id="12">
+                <img src="../assets/catalog/item-12.png" alt="photo" />
+              </div>
+              <div class="product-box">
+                <div class="product-info" data-id="12">
+                  <a class="product-title" href="#">Lorem ipsum dolor sit</a>
+                  <div class="product-choose-box">
+                    <div class="product-choose">
+                      <div class="choose-input">
+                        <input
+                          type="radio"
+                          name="item-12"
+                          value="choose-1"
+                          checked
+                        />
+                        <label for="choose-1">Big</label>
+                      </div>
+                      <div class="product-price-box">
+                        <p class="price-value">9</p>
+                        <p class="price-currency">&euro;</p>
+                      </div>
+                    </div>
+                    <div class="product-choose">
+                      <div class="choose-input">
+                        <input type="radio" name="item-12" value="choose-2" />
+                        <label for="choose-2">Middle</label>
+                      </div>
+                      <div class="product-price-box">
+                        <p class="price-value">7</p>
+                        <p class="price-currency">&euro;</p>
+                      </div>
+                    </div>
+                    <div class="product-choose">
+                      <div class="choose-input">
+                        <input type="radio" name="item-12" value="choose-3" />
+                        <label for="choose-3">Small</label>
+                      </div>
+                      <div class="product-price-box">
+                        <p class="price-value">3</p>
+                        <p class="price-currency">&euro;</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-purchase" data-id="12">
+                  <div class="counter-box">
+                    <div class="counter">
+                      <button class="counter-minus">-</button>
+                      <input class="counter-value" type="text" value="1" />
+                      <button class="counter-plus">+</button>
+                    </div>
+                  </div>
+                  <div class="total-box">
+                    <div class="total-price">
+                      <p class="total-text">Total price:</p>
+                      <p class="total-value">9</p>
+                      <p class="total-currency">&euro;</p>
+                    </div>
+                  </div>
+                  <!-- <button class="buy-button" type="button">Buy</button> -->
+                  <button class="close-button">&#10006;</button>
+                </div>
+              </div>
+            </div>
+            <div class="product" data-id="13">
+              <div class="product-image" data-id="13">
+                <img src="../assets/catalog/item-13.png" alt="photo" />
+              </div>
+              <div class="product-box">
+                <div class="product-info" data-id="13">
+                  <a class="product-title" href="#">Lorem ipsum dolor sit</a>
+                  <div class="product-choose-box">
+                    <div class="product-choose">
+                      <div class="choose-input">
+                        <input
+                          type="radio"
+                          name="item-13"
+                          value="choose-1"
+                          checked
+                        />
+                        <label for="choose-1">Big</label>
+                      </div>
+                      <div class="product-price-box">
+                        <p class="price-value">21</p>
+                        <p class="price-currency">&euro;</p>
+                      </div>
+                    </div>
+                    <div class="product-choose">
+                      <div class="choose-input">
+                        <input type="radio" name="item-13" value="choose-2" />
+                        <label for="choose-2">Middle</label>
+                      </div>
+                      <div class="product-price-box">
+                        <p class="price-value">18</p>
+                        <p class="price-currency">&euro;</p>
+                      </div>
+                    </div>
+                    <div class="product-choose">
+                      <div class="choose-input">
+                        <input type="radio" name="item-13" value="choose-3" />
+                        <label for="choose-3">Small</label>
+                      </div>
+                      <div class="product-price-box">
+                        <p class="price-value">16</p>
+                        <p class="price-currency">&euro;</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-purchase" data-id="13">
+                  <div class="counter-box">
+                    <div class="counter">
+                      <button class="counter-minus">-</button>
+                      <input class="counter-value" type="text" value="1" />
+                      <button class="counter-plus">+</button>
+                    </div>
+                  </div>
+                  <div class="total-box">
+                    <div class="total-price">
+                      <p class="total-text">Total price:</p>
+                      <p class="total-value">21</p>
+                      <p class="total-currency">&euro;</p>
+                    </div>
+                  </div>
+                  <!-- <button class="buy-button" type="button">Buy</button> -->
+                  <button class="close-button">&#10006;</button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="cart-total">
+            <div class="cart-total__block">
+              <p class="grandtotal-text">Cart total:</p>
+              <p class="grandtotal-value">48</p>
+              <p class="grandtotal-currency">&euro;</p>
+            </div>
+            <button class="total-button" type="button">Get order</button>
           </section>
         </main>
       </div>
       <footer class="footer">
         <section class="footer-top">
           <div class="footer-logo">
-            <img src="../assets/logo/logo-white-oth.png" alt="logo" />
+            <a href="../index.html">
+              <img src="../assets/logo/logo-white-oth.png" alt="logo" />
+            </a>
           </div>
           <div class="footer-contacts">
             <p class="contact">+098-765-4321</p>
@@ -122,10 +336,14 @@
           </div>
           <div class="footer-menu">
             <div class="menu-box">
-              <a class="menu-item" href="#">Bouquets&Flowers</a>
-              <a class="menu-item" href="#">Gifts&Cards</a>
-              <a class="menu-item" href="#">Delivery&Payment</a>
-              <a class="menu-item" href="#">About us</a>
+              <a class="menu-item" href="../pages/catalog.html"
+                >Bouquets&Flowers</a
+              >
+              <a class="menu-item" href="../pages/catalog.html">Gifts&Cards</a>
+              <a class="menu-item" href="../pages/terms.html"
+                >Delivery&Payment</a
+              >
+              <a class="menu-item" href="../pages/about.html">About us</a>
             </div>
           </div>
         </section>
@@ -147,7 +365,7 @@
                 ><img src="../assets/icons/socials/telegram36.png" alt="tel"
               /></a>
               <a class="social-item" href="#"
-                ><img src="../assets/icons/socials/whatsapp36.png" alt="wa"
+                ><img src="../assets/icons/socials/whatsapp36-2.png" alt="wa"
               /></a>
             </div>
           </div>

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../styles/product/product.css" />
     <script defer src="../scripts/showSearch.js"></script>
     <script defer src="../scripts/showMenu.js"></script>
+    <script src="../scripts/toCart.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -14,18 +15,26 @@
         <header class="header">
           <section class="header-top">
             <div class="logo-box">
-              <img
-                class="logo"
-                src="../assets/logo/logo-prime-oth.png"
-                alt="logo"
-              />
+              <a class="logo" href="../index.html">
+                <img
+                  class="logo"
+                  src="../assets/logo/logo-prime-oth.png"
+                  alt="logo"
+                />
+              </a>
             </div>
             <div class="menu-box">
               <div class="menu-box__block">
-                <a class="menu-item" href="#">Bouquets&Flowers</a>
-                <a class="menu-item" href="#">Gifts&Cards</a>
-                <a class="menu-item" href="#">Delivery&Payment</a>
-                <a class="menu-item" href="#">About us</a>
+                <a class="menu-item" href="../pages/catalog.html"
+                  >Bouquets&Flowers</a
+                >
+                <a class="menu-item" href="../pages/catalog.html"
+                  >Gifts&Cards</a
+                >
+                <a class="menu-item" href="../pages/terms.html"
+                  >Delivery&Payment</a
+                >
+                <a class="menu-item" href="../pages/about.html">About us</a>
               </div>
             </div>
             <div class="menu-mini-box">
@@ -34,7 +43,7 @@
                 type="button"
                 onclick="menuOpen();"
               >
-                <img src="../assets/icons/burger24.png" alt="menu" />
+                <img src="../assets/icons/burger24-2.png" alt="menu" />
               </button>
               <div class="menu-mini">
                 <div class="menu-mini-close">
@@ -42,10 +51,16 @@
                     &#10006;
                   </button>
                 </div>
-                <a class="menu-item" href="#">Bouquets&Flowers</a>
-                <a class="menu-item" href="#">Gifts&Cards</a>
-                <a class="menu-item" href="#">Delivery&Payment</a>
-                <a class="menu-item" href="#">About us</a>
+                <a class="menu-item" href="../pages/catalog.html"
+                  >Bouquets&Flowers</a
+                >
+                <a class="menu-item" href="../pages/catalog.html"
+                  >Gifts&Cards</a
+                >
+                <a class="menu-item" href="../pages/terms.html"
+                  >Delivery&Payment</a
+                >
+                <a class="menu-item" href="../pages/about.html">About us</a>
               </div>
             </div>
             <div class="services-box">
@@ -65,7 +80,12 @@
                   </button>
                 </div>
                 <div class="cart-box">
-                  <button class="service-button" type="button" id="btnCart">
+                  <button
+                    class="service-button"
+                    type="button"
+                    id="btnCart"
+                    onclick="toCart();"
+                  >
                     <img src="../assets/icons/cart24.png" alt="cart" />
                   </button>
                 </div>
@@ -113,7 +133,7 @@
                       <div class="choose-input">
                         <input
                           type="radio"
-                          name="product"
+                          name="item-11"
                           value="choose-1"
                           checked
                         />
@@ -129,7 +149,7 @@
                     </div>
                     <div class="product-choose">
                       <div class="choose-input">
-                        <input type="radio" name="product" value="choose-2" />
+                        <input type="radio" name="item-11" value="choose-2" />
                         <label for="choose-2">Middle</label>
                       </div>
                       <p class="choose-text">
@@ -142,7 +162,7 @@
                     </div>
                     <div class="product-choose">
                       <div class="choose-input">
-                        <input type="radio" name="product" value="choose-3" />
+                        <input type="radio" name="item-11" value="choose-3" />
                         <label for="choose-3">Small</label>
                       </div>
                       <p class="choose-text">Lorem ipsum dolor sit amet.</p>
@@ -265,7 +285,9 @@
       <footer class="footer">
         <section class="footer-top">
           <div class="footer-logo">
-            <img src="../assets/logo/logo-white-oth.png" alt="logo" />
+            <a href="../index.html">
+              <img src="../assets/logo/logo-white-oth.png" alt="logo" />
+            </a>
           </div>
           <div class="footer-contacts">
             <p class="contact">+098-765-4321</p>
@@ -273,10 +295,14 @@
           </div>
           <div class="footer-menu">
             <div class="menu-box">
-              <a class="menu-item" href="#">Bouquets&Flowers</a>
-              <a class="menu-item" href="#">Gifts&Cards</a>
-              <a class="menu-item" href="#">Delivery&Payment</a>
-              <a class="menu-item" href="#">About us</a>
+              <a class="menu-item" href="../pages/catalog.html"
+                >Bouquets&Flowers</a
+              >
+              <a class="menu-item" href="../pages/catalog.html">Gifts&Cards</a>
+              <a class="menu-item" href="../pages/terms.html"
+                >Delivery&Payment</a
+              >
+              <a class="menu-item" href="../pages/about.html">About us</a>
             </div>
           </div>
         </section>
@@ -298,7 +324,7 @@
                 ><img src="../assets/icons/socials/telegram36.png" alt="tel"
               /></a>
               <a class="social-item" href="#"
-                ><img src="../assets/icons/socials/whatsapp36.png" alt="wa"
+                ><img src="../assets/icons/socials/whatsapp36-2.png" alt="wa"
               /></a>
             </div>
           </div>
