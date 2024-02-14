@@ -85,7 +85,7 @@ body {
 }
 .header .header-top .menu-mini-box {
   margin: auto;
-  width: auto;
+  max-width: 50vw;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -114,7 +114,7 @@ body {
   min-height: 22.5vh;
   position: absolute;
   top: 7.2vh;
-  left: -5px;
+  left: -10vw;
   float: left;
   display: flex;
   flex-direction: column;
@@ -616,7 +616,7 @@ body {
 }
 .wrapper .top .header .header-top .menu-mini-box {
   margin: auto;
-  width: auto;
+  max-width: 50vw;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -645,7 +645,7 @@ body {
   min-height: 22.5vh;
   position: absolute;
   top: 7.2vh;
-  left: -5px;
+  left: -10vw;
   float: left;
   display: flex;
   flex-direction: column;
@@ -848,6 +848,7 @@ body {
   margin: 0 auto;
   width: 100%;
   min-height: 90vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -856,19 +857,25 @@ body {
 }
 .wrapper .top .main .hero {
   margin: 0 auto;
+  margin-bottom: 5%;
   width: 100%;
-  height: 90vh;
+  max-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
   justify-content: flex-start;
 }
+@media only screen and (max-width: 1023px) {
+  .wrapper .top .main .hero {
+    max-height: 105vh;
+  }
+}
 .wrapper .top .main .hero .slide {
   margin: 0 auto;
   margin-bottom: 20px;
   width: 100%;
-  height: auto;
+  height: 80%;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
@@ -879,6 +886,8 @@ body {
     flex-direction: column;
     justify-content: center;
     box-sizing: border-box;
+    width: 100%;
+    height: auto;
   }
 }
 .wrapper .top .main .hero .slide img {
@@ -889,15 +898,27 @@ body {
 @media only screen and (max-width: 1023px) {
   .wrapper .top .main .hero .slide img {
     width: 100%;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .wrapper .top .main .hero .slide .slide-second {
+    display: none;
   }
 }
 .wrapper .top .main .hero .delivery-box {
   margin: 0 auto;
   width: 90%;
+  height: 20%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
+}
+@media only screen and (max-width: 1023px) {
+  .wrapper .top .main .hero .delivery-box {
+    height: auto;
+  }
 }
 .wrapper .top .main .hero .delivery-box__heading {
   margin: 0 auto;
@@ -915,6 +936,7 @@ body {
 .wrapper .top .main .hero .delivery-box__order {
   margin: 0 auto;
   width: 100%;
+  height: auto;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
@@ -939,7 +961,7 @@ body {
   margin: 0 auto;
   margin-bottom: 40px;
   width: 90%;
-  min-height: 45vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -961,25 +983,21 @@ body {
 .wrapper .top .main .promo__block {
   margin: auto;
   width: 100%;
-  height: 80%;
+  height: auto;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
   justify-content: space-between;
-}
-@media only screen and (max-width: 767px) {
-  .wrapper .top .main .featured__block,
-  .wrapper .top .main .best-selling__block,
-  .wrapper .top .main .promo__block {
-    flex-wrap: wrap;
-  }
+  flex-wrap: wrap;
 }
 .wrapper .top .main .featured__block .product,
 .wrapper .top .main .best-selling__block .product,
 .wrapper .top .main .promo__block .product {
   margin: 0 auto;
+  margin-bottom: 2%;
   width: 19%;
-  height: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -992,6 +1010,13 @@ body {
   .wrapper .top .main .best-selling__block .product,
   .wrapper .top .main .promo__block .product {
     width: 47%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .wrapper .top .main .featured__block .product,
+  .wrapper .top .main .best-selling__block .product,
+  .wrapper .top .main .promo__block .product {
+    width: 33%;
   }
 }
 .wrapper .top .main .featured__block .product .product-image,

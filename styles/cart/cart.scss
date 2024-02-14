@@ -67,11 +67,14 @@ body {
           justify-content: space-between;
           //border: 2px solid blue;
           border: 1px solid gray;
-
+          border-radius: 5px;
           .product-image {
             margin: 0 auto;
             width: auto;
             height: 100%;
+            @media only screen and (max-width: 1023px) {
+              display: none;
+            }
             //border: 1px solid orange;
             img {
               margin: auto;
@@ -85,6 +88,10 @@ body {
             //width: auto;
             height: 100%;
             @include flex-horizontal();
+            @media only screen and (max-width: 767px) {
+              padding: 2%;
+              @include flex-vertical();
+            }
             justify-content: space-evenly;
             //border: 2px solid green;
 
@@ -94,6 +101,11 @@ body {
               width: 50%; // inherit;
               height: 70%;
               @include flex-horizontal();
+              @media only screen and (max-width: 767px) {
+                width: 100%;
+                height: auto;
+                @include flex-vertical();
+              }
               justify-content: space-evenly;
               //border: 1px solid red;
               .product-title {
@@ -101,6 +113,11 @@ body {
                 //margin-bottom: 2%;
                 width: 50%; //;
                 height: 100%; // 20%;
+                @media only screen and (max-width: 767px) {
+                  margin-bottom: 3%;
+                  width: 100%;
+                  height: auto;
+                }
                 @include flex-vertical();
                 text-decoration: none;
                 @include text-font(22px, 500, 22px, 0%);
@@ -112,12 +129,22 @@ body {
                 width: 50%; // 100%;
                 height: 100%; // 30%; //fit-content;
                 @include flex-vertical();
+                @media only screen and (max-width: 767px) {
+                  margin-bottom: 3%;
+                  width: 100%;
+                  height: auto;
+                }
                 //justify-content: flex-start;
                 //border: 1px solid violet;
                 .product-choose {
                   margin: auto 0;
                   width: 90%; // 33%;
                   height: 100%;
+                  @media only screen and (max-width: 767px) {
+                    margin-bottom: 3%;
+                    width: 100%;
+                    height: auto;
+                  }
                   @include flex-horizontal();
                   justify-content: space-between;
                   //border: 1px solid green;
@@ -127,6 +154,7 @@ body {
                     width: 50%; // fit-content; // 100%;
                     height: 70%; // 20%;
                     @include flex-horizontal();
+                    justify-content: flex-start;
                     //border: 1px solid orange;
                     label {
                       margin: auto; // 0;
@@ -164,6 +192,11 @@ body {
               height: 70%; // 30%;
               @include flex-horizontal();
               justify-content: flex-start;
+              @media only screen and (max-width: 767px) {
+                margin-bottom: 3%;
+                width: 100%;
+                height: auto;
+              }
               //border: 1px solid red;
               .counter-box {
                 margin: auto;
@@ -296,7 +329,7 @@ body {
         @include flex-vertical();
         &__block {
           margin: 0 auto;
-          margin-bottom: 1%;
+          margin-bottom: 2%;
           width: 100%;
           height: auto;
           @include flex-horizontal();
@@ -317,6 +350,12 @@ body {
           margin: auto 0;
           padding: 1% 2%;
           width: 12vw;
+          @media only screen and (max-width: 767px) {
+            margin-bottom: 3%;
+            padding: 3% 5%;
+            width: 42vw;
+            height: auto;
+          }
           height: auto;
           align-self: self-end;
           background-color: $color-prime;

@@ -41,6 +41,10 @@ body {
         margin-top: 2%;
         width: $block-width;
         height: $slide-height * 0.9; // $block-min-height;
+        @media only screen and (max-width: 1023px) {
+          margin-bottom: 2%;
+          height: auto;
+        }
         @include flex-vertical();
         //border: 1px solid red;
         .product {
@@ -49,21 +53,37 @@ body {
           height: 100%;
           @include flex-horizontal();
           justify-content: space-between;
+          @media only screen and (max-width: 1023px) {
+            @include flex-vertical();
+          }
           .product-image {
             margin: 0 auto;
             width: auto;
             height: 100%;
+            @media only screen and (max-width: 1023px) {
+              width: 100%;
+              height: auto;
+            }
             //border: 1px solid blue;
             img {
               margin: auto;
               width: auto;
               height: 100%;
+              @media only screen and (max-width: 1023px) {
+                width: 100%;
+                height: auto;
+              }
             }
           }
           .product-box {
             margin: 0 auto;
             min-width: 50%;
             height: 100%;
+            @media only screen and (max-width: 1023px) {
+              margin-bottom: 2%;
+              width: 100%;
+              height: auto;
+            }
             @include flex-vertical();
             justify-content: space-evenly;
             .product-info {
@@ -71,18 +91,34 @@ body {
               padding: 1% 5%;
               width: inherit;
               height: 70%;
+              @media only screen and (max-width: 1023px) {
+                margin-bottom: 2%;
+                width: 100%;
+                height: auto;
+              }
               @include flex-vertical();
               justify-content: space-evenly;
               //border: 1px solid red;
               .product-title {
                 //margin-bottom: 2%;
                 height: 20%;
+                @media only screen and (max-width: 1023px) {
+                  margin-bottom: 2%;
+                  width: 100%;
+                  height: auto;
+                }
                 text-decoration: none;
                 @include text-font(22px, 500, 22px, 0%);
                 color: $color-prime;
               }
               .product-description {
                 height: 50%;
+                @media only screen and (max-width: 1023px) {
+                  margin-bottom: 2%;
+                  width: 100%;
+                  height: auto;
+                  text-align: justify;
+                }
                 text-decoration: none;
                 @include text-font(16px, 400, 20px, 0%);
                 color: $color-font;
@@ -92,12 +128,26 @@ body {
                 width: 100%;
                 height: 30%; //fit-content;
                 @include flex-horizontal();
+                @media only screen and (max-width: 1023px) {
+                  margin-bottom: 2%;
+                  width: 100%;
+                  height: auto;
+                  @include flex-vertical();
+                }
                 justify-content: flex-start;
                 .product-choose {
                   margin: 0 auto;
                   width: 33%;
                   height: 100%;
                   @include flex-vertical();
+                  @media only screen and (max-width: 1023px) {
+                    margin-bottom: 2%;
+                    padding: 2%;
+                    width: 100%;
+                    height: auto;
+                    border: 1px solid gray;
+                    border-radius: 5px;
+                  }
                   justify-content: space-between;
                   .choose-input {
                     margin: 0;
@@ -142,12 +192,23 @@ body {
               width: inherit;
               height: 30%;
               @include flex-horizontal();
+              @media only screen and (max-width: 767px) {
+                margin-bottom: 2%;
+                width: 100%;
+                height: auto;
+                @include flex-vertical();
+              }
               justify-content: flex-start;
               //border: 1px solid red;
               .counter-box {
                 margin: auto;
                 width: 40%;
                 height: 30%;
+                @media only screen and (max-width: 767px) {
+                  margin-bottom: 3%;
+                  width: 100%;
+                  height: auto;
+                }
                 @include flex-vertical();
                 //border: 1px solid red;
                 .counter {
@@ -193,6 +254,12 @@ body {
                 width: 40%; // fit-content; // 20%;
                 height: 30%;
                 @include flex-vertical();
+                @media only screen and (max-width: 1023px) {
+                  margin-bottom: 3%;
+                  width: 100%;
+                  height: auto;
+                  @include flex-horizontal();
+                }
                 .total-price {
                   margin: 0 auto;
                   width: 100%; // 75%;
@@ -220,6 +287,12 @@ body {
                 margin: auto;
                 padding: 2% 7%;
                 height: 30%;
+                @media only screen and (max-width: 1023px) {
+                  margin-bottom: 3%;
+                  padding: 3% 7%;
+                  width: 50%;
+                  height: auto;
+                }
                 background-color: $color-down;
                 border: none;
                 outline: none;
@@ -259,15 +332,19 @@ body {
           height: 80%;
           @include flex-horizontal();
           justify-content: space-between;
-          @media only screen and (max-width: 767px) {
-            flex-wrap: wrap;
-          }
+          flex-wrap: wrap;
+          // @media only screen and (max-width: 767px) {
+          //   flex-wrap: wrap;
+          // }
           //border: 2px solid orange;
           .product {
             margin: 0 auto;
             width: 19%;
             @media only screen and (max-width: 767px) {
               width: 47%;
+            }
+            @media only screen and (min-width: 768px) and (max-width: 1023px) {
+              width: 33%;
             }
             height: 100%;
             @include flex-vertical();

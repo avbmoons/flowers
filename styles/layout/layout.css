@@ -85,7 +85,7 @@ body {
 }
 .header .header-top .menu-mini-box {
   margin: auto;
-  width: auto;
+  max-width: 50vw;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -114,7 +114,7 @@ body {
   min-height: 22.5vh;
   position: absolute;
   top: 7.2vh;
-  left: -5px;
+  left: -10vw;
   float: left;
   display: flex;
   flex-direction: column;
@@ -616,7 +616,7 @@ body {
 }
 .wrapper .top .header .header-top .menu-mini-box {
   margin: auto;
-  width: auto;
+  max-width: 50vw;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -645,7 +645,7 @@ body {
   min-height: 22.5vh;
   position: absolute;
   top: 7.2vh;
-  left: -5px;
+  left: -10vw;
   float: left;
   display: flex;
   flex-direction: column;

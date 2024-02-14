@@ -85,7 +85,7 @@ body {
 }
 .header .header-top .menu-mini-box {
   margin: auto;
-  width: auto;
+  max-width: 50vw;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -114,7 +114,7 @@ body {
   min-height: 22.5vh;
   position: absolute;
   top: 7.2vh;
-  left: -5px;
+  left: -10vw;
   float: left;
   display: flex;
   flex-direction: column;
@@ -616,7 +616,7 @@ body {
 }
 .wrapper .top .header .header-top .menu-mini-box {
   margin: auto;
-  width: auto;
+  max-width: 50vw;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -645,7 +645,7 @@ body {
   min-height: 22.5vh;
   position: absolute;
   top: 7.2vh;
-  left: -5px;
+  left: -10vw;
   float: left;
   display: flex;
   flex-direction: column;
@@ -894,11 +894,17 @@ body {
   box-sizing: border-box;
   justify-content: space-between;
   border: 1px solid gray;
+  border-radius: 5px;
 }
 .wrapper .top .main .cart-list .product .product-image {
   margin: 0 auto;
   width: auto;
   height: 100%;
+}
+@media only screen and (max-width: 1023px) {
+  .wrapper .top .main .cart-list .product .product-image {
+    display: none;
+  }
 }
 .wrapper .top .main .cart-list .product .product-image img {
   margin: auto;
@@ -914,6 +920,15 @@ body {
   box-sizing: border-box;
   justify-content: space-evenly;
 }
+@media only screen and (max-width: 767px) {
+  .wrapper .top .main .cart-list .product .product-box {
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+}
 .wrapper .top .main .cart-list .product .product-box .product-info {
   margin: auto 0;
   width: 50%;
@@ -922,6 +937,16 @@ body {
   justify-content: center;
   box-sizing: border-box;
   justify-content: space-evenly;
+}
+@media only screen and (max-width: 767px) {
+  .wrapper .top .main .cart-list .product .product-box .product-info {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+  }
 }
 .wrapper .top .main .cart-list .product .product-box .product-info .product-title {
   margin: auto 0;
@@ -938,6 +963,13 @@ body {
   letter-spacing: 0%;
   color: #39a79d;
 }
+@media only screen and (max-width: 767px) {
+  .wrapper .top .main .cart-list .product .product-box .product-info .product-title {
+    margin-bottom: 3%;
+    width: 100%;
+    height: auto;
+  }
+}
 .wrapper .top .main .cart-list .product .product-box .product-info .product-choose-box {
   margin: auto 0;
   width: 50%;
@@ -946,6 +978,13 @@ body {
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
+}
+@media only screen and (max-width: 767px) {
+  .wrapper .top .main .cart-list .product .product-box .product-info .product-choose-box {
+    margin-bottom: 3%;
+    width: 100%;
+    height: auto;
+  }
 }
 .wrapper .top .main .cart-list .product .product-box .product-info .product-choose-box .product-choose {
   margin: auto 0;
@@ -956,6 +995,13 @@ body {
   box-sizing: border-box;
   justify-content: space-between;
 }
+@media only screen and (max-width: 767px) {
+  .wrapper .top .main .cart-list .product .product-box .product-info .product-choose-box .product-choose {
+    margin-bottom: 3%;
+    width: 100%;
+    height: auto;
+  }
+}
 .wrapper .top .main .cart-list .product .product-box .product-info .product-choose-box .product-choose .choose-input {
   margin: auto;
   width: 50%;
@@ -963,6 +1009,7 @@ body {
   display: flex;
   justify-content: center;
   box-sizing: border-box;
+  justify-content: flex-start;
 }
 .wrapper .top .main .cart-list .product .product-box .product-info .product-choose-box .product-choose .choose-input label {
   margin: auto;
@@ -1004,6 +1051,13 @@ body {
   justify-content: center;
   box-sizing: border-box;
   justify-content: flex-start;
+}
+@media only screen and (max-width: 767px) {
+  .wrapper .top .main .cart-list .product .product-box .product-purchase {
+    margin-bottom: 3%;
+    width: 100%;
+    height: auto;
+  }
 }
 .wrapper .top .main .cart-list .product .product-box .product-purchase .counter-box {
   margin: auto;
@@ -1165,7 +1219,7 @@ body {
 }
 .wrapper .top .main .cart-total__block {
   margin: 0 auto;
-  margin-bottom: 1%;
+  margin-bottom: 2%;
   width: 100%;
   height: auto;
   display: flex;
@@ -1208,6 +1262,14 @@ body {
   letter-spacing: 0%;
   color: white;
   cursor: pointer;
+}
+@media only screen and (max-width: 767px) {
+  .wrapper .top .main .cart-total .total-button {
+    margin-bottom: 3%;
+    padding: 3% 5%;
+    width: 42vw;
+    height: auto;
+  }
 }
 .wrapper .top .main .cart-total .total-button:hover {
   background-color: #50c3b9;

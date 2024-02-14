@@ -34,42 +34,53 @@ body {
       margin: 0 auto;
       width: 100%;
       min-height: $main-min-height;
+      height: auto;
       @include flex-vertical();
       justify-content: flex-start;
       .hero {
         margin: 0 auto;
+        margin-bottom: 5%;
         width: 100%;
-        height: $slide-height;
-        // @media only screen and (max-width: 1023px) {
-        //   height: $slide-height * 0.8;
-        // }
+        max-height: $slide-height;
+        @media only screen and (max-width: 1023px) {
+          max-height: $slide-height + $header-height;
+        }
         @include flex-vertical();
         justify-content: flex-start;
-        //border: 2px solid red;
         .slide {
           margin: 0 auto;
           margin-bottom: 20px;
-          width: 100%; // auto;
-          height: auto; // 50%; // 100%;
+          width: 100%;
+          height: 80%;
           @include flex-horizontal();
           @media only screen and (max-width: 1023px) {
             @include flex-vertical();
+            width: 100%;
+            height: auto;
           }
-          //border: 2px solid green;
           img {
             margin: 0 auto;
-            width: math.div($site-width, 2); // $site-width/3; // auto;
-            height: auto; // 100%;
+            width: math.div($site-width, 2);
+            height: auto;
             @media only screen and (max-width: 1023px) {
               width: 100%;
+              height: auto;
+            }
+          }
+          .slide-second {
+            @media only screen and (max-width: 1023px) {
+              display: none;
             }
           }
         }
         .delivery-box {
           margin: 0 auto;
           width: $block-width;
+          height: 20%;
           @include flex-vertical();
-          //border: 1px solid red;
+          @media only screen and (max-width: 1023px) {
+            height: auto;
+          }
           &__heading {
             margin: 0 auto;
             margin-bottom: 10px;
@@ -83,6 +94,7 @@ body {
           &__order {
             margin: 0 auto;
             width: 100%;
+            height: auto;
             @include flex-horizontal();
             .delivery-input {
               height: $header-bottom-height * 0.8;
@@ -102,11 +114,10 @@ body {
       .promo {
         margin: 0 auto;
         margin-bottom: 40px;
-        width: $block-width; // 100%;
-        min-height: $block-min-height; // $slide-height;
+        width: $block-width;
+        height: auto;
         @include flex-vertical();
         justify-content: flex-start;
-        //border: 2px solid red;
         .heading-prime {
           padding: 10px;
           @include text-font(20px, 600, 20px, 0%);
@@ -116,21 +127,21 @@ body {
         &__block {
           margin: auto;
           width: 100%;
-          //height: auto;
-          height: 80%;
+          height: auto;
           @include flex-horizontal();
           justify-content: space-between;
-          @media only screen and (max-width: 767px) {
-            flex-wrap: wrap;
-          }
-          //border: 2px solid orange;
+          flex-wrap: wrap;
           .product {
             margin: 0 auto;
+            margin-bottom: 2%;
             width: 19%;
             @media only screen and (max-width: 767px) {
               width: 47%;
             }
-            height: 100%;
+            @media only screen and (min-width: 768px) and (max-width: 1023px) {
+              width: 33%;
+            }
+            height: fit-content;
             @include flex-vertical();
             justify-content: space-between;
             border: 1px solid $color-down-light;

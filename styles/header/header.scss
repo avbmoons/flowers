@@ -66,7 +66,8 @@ body {
     }
     .menu-mini-box {
       margin: auto;
-      width: auto;
+      //width: auto;
+      max-width: 50vw;
       height: auto;
       @include flex-vertical();
       position: relative;
@@ -88,7 +89,7 @@ body {
         min-height: $header-height * 1.5;
         position: absolute;
         top: $header-top-height * 0.8;
-        left: -5px;
+        left: -10vw; // -5px;
         float: left;
         @include flex-vertical();
         display: none;
