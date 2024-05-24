@@ -1,4 +1,4 @@
-@use "sass:math";
+@use 'sass:math';
 
 $site-width: 100%;
 
@@ -8,22 +8,24 @@ $header-bottom-height: $header-height * 0.4;
 
 $footer-height: 20vh;
 
-$main-min-height: 90vh; // 100vh-($header-height);
+$main-min-height: 100vh-($header-height);
 
 $slide-height: $main-min-height;
 $filter-height: 64px;
 $block-width: 90%; //60%
-$block-min-height: $slide-height * 0.5;
+$block-min-height: ($slide-height)/2;
 
 $item-height: 616px;
 $item-height-mini: 409px;
+
+$input-height: 42px;
 
 $cart-item-height: $item-height-mini * 0.5;
 
 $color-prime-light: #e4f2f1; //rgb(228,242,241)
 $color-prime: #39a79d; //rgb(57,167,157)
 $color-prime-dark: #515151; //rgb(81,81,81)
-$color-accent: #dca968; //rgb(220,169,104)
+$color-accent: hsl(34, 62%, 64%); //rgb(220,169,104)
 
 $color-hover-light: #ecf9f8; //rgb(236,249,248)
 $color-hover: #50c3b9; //rgb(80,195,185)

@@ -139,7 +139,7 @@ body {
   font-weight: 500;
   line-height: 16px;
   letter-spacing: 0%;
-  color: #dca968;
+  color: hsl(34, 62%, 64%);
   text-align: right;
   background: none;
   border: none;
@@ -306,7 +306,7 @@ body {
   font-weight: 400;
   line-height: 16px;
   letter-spacing: 0%;
-  color: #dca968;
+  color: hsl(34, 62%, 64%);
 }
 @media only screen and (max-width: 1023px) {
   .header .header-bottom .search-input-box .search-close {

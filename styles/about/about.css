@@ -139,7 +139,7 @@ body {
   font-weight: 500;
   line-height: 16px;
   letter-spacing: 0%;
-  color: #dca968;
+  color: hsl(34, 62%, 64%);
   text-align: right;
   background: none;
   border: none;
@@ -306,7 +306,7 @@ body {
   font-weight: 400;
   line-height: 16px;
   letter-spacing: 0%;
-  color: #dca968;
+  color: hsl(34, 62%, 64%);
 }
 @media only screen and (max-width: 1023px) {
   .header .header-bottom .search-input-box .search-close {
@@ -670,7 +670,7 @@ body {
   font-weight: 500;
   line-height: 16px;
   letter-spacing: 0%;
-  color: #dca968;
+  color: hsl(34, 62%, 64%);
   text-align: right;
   background: none;
   border: none;
@@ -837,7 +837,7 @@ body {
   font-weight: 400;
   line-height: 16px;
   letter-spacing: 0%;
-  color: #dca968;
+  color: hsl(34, 62%, 64%);
 }
 @media only screen and (max-width: 1023px) {
   .wrapper .top .header .header-bottom .search-input-box .search-close {
@@ -852,7 +852,44 @@ body {
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
+  justify-content: flex-start;
   text-align: center;
+}
+.wrapper .top .main .order-section {
+  margin: 0 auto;
+  width: 70%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 1px solid red;
+}
+.wrapper .top .main .order-section .section-check {
+  width: 100%;
+  height: 42px;
+  display: none;
+}
+.wrapper .top .main .order-section .section-label {
+  width: 100%;
+  height: 42px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0%;
+  background-color: #39a79d;
+  color: white;
+}
+.wrapper .top .main .order-section .section-block {
+  margin: 0 auto;
+  width: 90%;
+  height: 0;
+  background-color: #e4f2f1;
+  border: 1px solid orange;
+}
+.wrapper .top .main .order-section .section-check:checked + .section-label + .section-block {
+  min-height: 42px;
+  background-color: orange;
 }
 .wrapper .footer {
   margin: 0 auto;

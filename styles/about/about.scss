@@ -1,8 +1,8 @@
-@use "sass:math";
+@use 'sass:math';
 
-@import "../header/header.scss";
-@import "../footer/footer.scss";
-@import "../vars/vars.scss";
+@import '../header/header.scss';
+@import '../footer/footer.scss';
+@import '../vars/vars.scss';
 
 * {
   margin: 0;
@@ -35,8 +35,39 @@ body {
       width: 100%;
       min-height: $main-min-height;
       @include flex-vertical();
-      //justify-content: flex-start;
+      justify-content: flex-start;
       text-align: center;
+      .order-section {
+        margin: 0 auto;
+        width: 70%;
+        height: auto;
+        @include flex-vertical();
+        border: 1px solid red;
+        .section-check {
+          width: 100%;
+          height: $input-height;
+          display: none;
+        }
+        .section-label {
+          width: 100%;
+          height: $input-height;
+          @include text-font(18px, 400, 18px, 0%);
+          background-color: $color-prime;
+          color: white;
+        }
+        .section-block {
+          margin: 0 auto;
+          width: 90%;
+          //min-height: $input-height;
+          height: 0;
+          background-color: $color-prime-light;
+          border: 1px solid orange;
+        }
+        .section-check:checked + .section-label + .section-block {
+          min-height: $input-height;
+          background-color: orange;
+        }
+      }
     }
   }
   .footer {

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flowers.order</title>
+    <link rel="stylesheet" href="../styles/order/order.css" />
+    <script defer src="../scripts/showSearch.js"></script>
+    <script defer src="../scripts/showMenu.js"></script>
+    <script src="../scripts/toCart.js"></script>
+    <script src="../data/points.js"></script>
+    <script src="../scripts/showDeliveryOptions.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="top">
+        <header class="header">
+          <section class="header-top">
+            <div class="logo-box">
+              <a class="logo" href="../index.html">
+                <img
+                  class="logo"
+                  src="../assets/logo/logo-prime-oth.png"
+                  alt="logo"
+                />
+              </a>
+            </div>
+            <div class="menu-box">
+              <div class="menu-box__block">
+                <a class="menu-item" href="../pages/catalog.html"
+                  >Bouquets&Flowers</a
+                >
+                <a class="menu-item" href="../pages/catalog.html"
+                  >Gifts&Cards</a
+                >
+                <a class="menu-item" href="../pages/terms.html"
+                  >Delivery&Payment</a
+                >
+                <a class="menu-item" href="../pages/about.html">About us</a>
+              </div>
+            </div>
+            <div class="menu-mini-box">
+              <button
+                class="menu-mini-button"
+                type="button"
+                onclick="menuOpen();"
+              >
+                <img src="../assets/icons/burger24-2.png" alt="menu" />
+              </button>
+              <div class="menu-mini">
+                <div class="menu-mini-close">
+                  <button class="close-button" onclick="menuClose();">
+                    &#10006;
+                  </button>
+                </div>
+                <a class="menu-item" href="../pages/catalog.html"
+                  >Bouquets&Flowers</a
+                >
+                <a class="menu-item" href="../pages/catalog.html"
+                  >Gifts&Cards</a
+                >
+                <a class="menu-item" href="../pages/terms.html"
+                  >Delivery&Payment</a
+                >
+                <a class="menu-item" href="../pages/about.html">About us</a>
+              </div>
+            </div>
+            <div class="services-box">
+              <div class="services-box__block">
+                <div class="search-box">
+                  <button
+                    class="service-button to-search"
+                    type="button"
+                    onclick="showSearch();"
+                  >
+                    <img src="../assets/icons/search24.png" alt="search" />
+                  </button>
+                </div>
+                <div class="user-box">
+                  <button class="service-button" type="button" id="btnUser">
+                    <img src="../assets/icons/user24.png" alt="user" />
+                  </button>
+                </div>
+                <div class="cart-box">
+                  <button
+                    class="service-button"
+                    type="button"
+                    id="btnCart"
+                    onclick="toCart();"
+                  >
+                    <img src="../assets/icons/cart24.png" alt="cart" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="header-bottom">
+            <div class="search-input-box">
+              <input
+                class="search-input"
+                type="text"
+                placeholder="Enter your searching here..."
+              />
+              <button class="search-button" id="btnSearch" type="button">
+                &#9658;
+              </button>
+              <button
+                class="search-close"
+                type="button"
+                onclick="closeSearch();"
+              >
+                &#10006;
+              </button>
+            </div>
+          </section>
+        </header>
+        <main class="main">
+          <div class="order-block">
+            <div class="order-section">
+              <input
+                class="section-check"
+                type="checkbox"
+                name="section"
+                id="section1"
+                checked="checked"
+              />
+              <label class="section-label" for="section1">Your contacts</label>
+              <div class="section-block">
+                <p class="section-text">Please, check your contacts</p>
+                <div class="input-box">
+                  <label class="input-label" for="userName">Name *</label>
+                  <input
+                    class="input-text"
+                    name="user-name"
+                    id="userName"
+                    type="text"
+                  />
+                </div>
+                <div class="input-box">
+                  <label class="input-label" for="userPhone">Phone *</label>
+                  <input
+                    class="input-text"
+                    name="user-phone"
+                    id="userPhone"
+                    type="phone"
+                  />
+                </div>
+                <div class="input-box">
+                  <label class="input-label" for="userEmail">E-mail</label>
+                  <input
+                    class="input-text"
+                    name="user-email"
+                    id="userEmail"
+                    type="email"
+                  />
+                </div>
+                <p class="section-chip">Next check your delivery option</p>
+              </div>
+            </div>
+            <div class="order-section">
+              <input
+                class="section-check"
+                type="checkbox"
+                name="section"
+                id="section2"
+              />
+              <label class="section-label" for="section2"
+                >Delivery options</label
+              >
+              <div class="section-block">
+                <p class="section-text">Please, choose the delivery option</p>
+                <div class="choose-block">
+                  <div class="choose-option">
+                    <div class="option-box">
+                      <label
+                        class="option-label"
+                        for="express"
+                        id="expressLabel"
+                        >Express delivery</label
+                      >
+                      <input
+                        class="option-input"
+                        type="radio"
+                        name="delivery"
+                        id="express"
+                        checked="checked"
+                        onclick="showExpress()"
+                      />
+                    </div>
+                    <div class="option-box">
+                      <label class="option-label" for="pickup" id="pickupLabel"
+                        >Pickup</label
+                      >
+                      <input
+                        class="option-input"
+                        type="radio"
+                        name="delivery"
+                        id="pickup"
+                        onclick="showPickup()"
+                      />
+                    </div>
+                  </div>
+                  <div class="input-box" id="pickupPoint">
+                    <label
+                      class="input-label pickup"
+                      for="pickupPointList"
+                      id="pickupPointLabel"
+                      >Pickup point *</label
+                    >
+                    <select
+                      class="select-text pickup"
+                      name="pickup-point"
+                      id="pickupPointList"
+                      onchange="showPickupChoose()"
+                    >
+                      <option value="">
+                        --- Please, choose the pickup point ---
+                      </option>
+                      <option value="point1">Point 1</option>
+                      <option value="point2">Point 2</option>
+                      <option value="point3">Point 3</option>
+                      <option value="point4">Point 4</option>
+                      <option value="point5">Point 5</option>
+                    </select>
+                  </div>
+                  <p class="choose-point" id="pickupChoose"></p>
+                  <div class="input-box" id="streetAddress">
+                    <label
+                      class="input-label"
+                      for="userStreet"
+                      id="streetAddressLabel"
+                      >Street address *</label
+                    >
+                    <input
+                      class="input-text"
+                      name="user-street"
+                      id="userStreet"
+                      type="text"
+                    />
+                  </div>
+                  <div class="input-box" id="orderComment">
+                    <label
+                      class="input-label"
+                      for="userComment"
+                      id="orderCommentLabel"
+                      >Order comment</label
+                    >
+                    <textarea
+                      class="area-text"
+                      name="user-comment"
+                      id="userComment"
+                      cols="30"
+                      rows="10"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="order-section">
+              <input
+                class="section-check"
+                type="checkbox"
+                name="section"
+                id="section3"
+              />
+              <label class="section-label" for="section3"
+                >Payment options</label
+              >
+              <div class="section-block">
+                <p class="section-text">Please, choose the payment option</p>
+                <div class="choose-block">
+                  <div class="choose-option payments">
+                    <div class="option-box payment">
+                      <label
+                        class="option-label"
+                        for="paycard"
+                        id="paycardLabel"
+                        ><img
+                          src="../assets/icons/payments/paymentsGroup2.png"
+                          alt="cards"
+                      /></label>
+                      <input
+                        class="option-input"
+                        type="radio"
+                        name="payments"
+                        id="paycard"
+                        checked="checked"
+                      />
+                    </div>
+                    <div class="option-box payment">
+                      <label
+                        class="option-label"
+                        for="cashCourier"
+                        id="cashCourierLabel"
+                        >Cash to courier</label
+                      >
+                      <input
+                        class="option-input"
+                        type="radio"
+                        name="payments"
+                        id="cashCourier"
+                      />
+                    </div>
+                    <div class="option-box payment">
+                      <label
+                        class="option-label"
+                        for="cardCourier"
+                        id="cardCourierLabel"
+                        >Card to courier</label
+                      >
+                      <input
+                        class="option-input"
+                        type="radio"
+                        name="payments"
+                        id="cardCourier"
+                      />
+                    </div>
+                    <div class="option-box payment">
+                      <label
+                        class="option-label"
+                        for="invoice"
+                        id="invoiceLabel"
+                        >Invoice</label
+                      >
+                      <input
+                        class="option-input"
+                        type="radio"
+                        name="payments"
+                        id="invoice"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="confirm-block">
+            <div class="confirm-box">
+              <p class="confirm-text">
+                Please, confirm your choice and pay for items in your shopping
+                cart
+              </p>
+              <button class="confirm-button">Confirm</button>
+            </div>
+          </div>
+        </main>
+      </div>
+      <footer class="footer">
+        <section class="footer-top">
+          <div class="footer-logo">
+            <a href="../index.html">
+              <img src="../assets/logo/logo-white-oth.png" alt="logo" />
+            </a>
+          </div>
+          <div class="footer-contacts">
+            <p class="contact">+098-765-4321</p>
+            <p class="contact">qwe.asd@kukkameri.coms</p>
+          </div>
+          <div class="footer-menu">
+            <div class="menu-box">
+              <a class="menu-item" href="../pages/catalog.html"
+                >Bouquets&Flowers</a
+              >
+              <a class="menu-item" href="../pages/catalog.html">Gifts&Cards</a>
+              <a class="menu-item" href="../pages/terms.html"
+                >Delivery&Payment</a
+              >
+              <a class="menu-item" href="../pages/about.html">About us</a>
+            </div>
+          </div>
+        </section>
+        <section class="footer-bottom">
+          <div class="footer-rights">
+            <p class="rights">
+              Kukkameri ltd.&nbsp;&#169;&nbsp;All rights reserved
+            </p>
+          </div>
+          <div class="footer-socials">
+            <div class="socials">
+              <a class="social-item" href="#"
+                ><img src="../assets/icons/socials/facebook36.png" alt="fb"
+              /></a>
+              <a class="social-item" href="#"
+                ><img src="../assets/icons/socials/instagram36.png" alt="ins"
+              /></a>
+              <a class="social-item" href="#"
+                ><img src="../assets/icons/socials/telegram36.png" alt="tel"
+              /></a>
+              <a class="social-item" href="#"
+                ><img src="../assets/icons/socials/whatsapp36-2.png" alt="wa"
+              /></a>
+            </div>
+          </div>
+        </section>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+.product-card {
+  margin: 10px;
+  padding: 10px;
+  width: 80%; // 23%; // 100px;
+  height: 100px; // auto; // 180px;
+  border: 1px solid violet;
+  background-color: azure;
+  display: flex;
+  //flex-direction: column;
+  justify-content: space-between;
+  .product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    h2 {
+      font-size: 18px;
+      font-weight: 500;
+      color: black;
+      border: 1px solid gray;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      color: blue;
+      border: 1px solid gray;
+    }
+  }
+  .cart-item-quantity {
+    min-width: 40px;
+    min-height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid blue;
+    background-color: #ccc;
+    .counter {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  img {
+    width: auto; // 100%;
+    height: 90%; // auto; // 50%;
+    border: 1px solid gray;
+  }
+  button {
+    height: 30px; //90%;
+    width: 30px;
+    background-color: aquamarine;
+    border: none;
+    outline: none;
+  }
+}
+
+
+<!-- <div class="product-card"> -->
+<!-- <img :src="imageUrl" alt="photo">
+<div class="product-info">
+  <h4>{{ product.title }}</h4>
+  <p>$ {{ product.price }}</p>       
+</div>
+<div class="cart-item-quantity">
+  <p>Qty</p>
+  <span class="counter">
+    <span v-on:click="decrementItem">-</span>
+   {{ product.quantity }}
+   <span v-on:click="incrementItem">+</span> 
+  </span>      
+</div>
+<button v-on:click="onRemove">Х</button> -->
