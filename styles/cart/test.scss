@@ -53,19 +53,18 @@
   }
 }
 
-
-<!-- <div class="product-card"> -->
-<!-- <img :src="imageUrl" alt="photo">
-<div class="product-info">
-  <h4>{{ product.title }}</h4>
-  <p>$ {{ product.price }}</p>       
-</div>
-<div class="cart-item-quantity">
-  <p>Qty</p>
-  <span class="counter">
-    <span v-on:click="decrementItem">-</span>
-   {{ product.quantity }}
-   <span v-on:click="incrementItem">+</span> 
-  </span>      
-</div>
-<button v-on:click="onRemove">Х</button> -->
+// <!-- <div class="product-card"> -->
+// <!-- <img :src="imageUrl" alt="photo">
+// <div class="product-info">
+//   <h4>{{ product.title }}</h4>
+//   <p>$ {{ product.price }}</p>
+// </div>
+// <div class="cart-item-quantity">
+//   <p>Qty</p>
+//   <span class="counter">
+//     <span v-on:click="decrementItem">-</span>
+//    {{ product.quantity }}
+//    <span v-on:click="incrementItem">+</span>
+//   </span>
+// </div>
+// <button v-on:click="onRemove">Х</button> -->

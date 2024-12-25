@@ -1,8 +1,8 @@
-@use "sass:math";
+@use 'sass:math';
 
-@import "../header/header.scss";
-@import "../footer/footer.scss";
-@import "../vars/vars.scss";
+@import '../header/header.scss';
+@import '../footer/footer.scss';
+@import '../vars/vars.scss';
 
 * {
   margin: 0;
@@ -40,7 +40,7 @@ body {
         margin: 0 auto;
         margin-bottom: 1%;
         width: $block-width;
-        min-height: $slide-height * 0.9;
+        min-height: 85vh; // $slide-height * 0.9;
         @include flex-vertical();
         justify-content: flex-start;
         &__heading {

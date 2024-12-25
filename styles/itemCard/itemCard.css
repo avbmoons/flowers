@@ -1,0 +1,128 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(../../assets/font/Montserrat-VariableFont_wght.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Montserrat;
+  color: #444444;
+}
+
+.product {
+  margin: 0 auto;
+  margin-bottom: 1%;
+  width: 19%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+  border: 1px solid #c1e1df;
+}
+@media only screen and (max-width: 767px) {
+  .product {
+    width: 47%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .product {
+    width: 33%;
+  }
+}
+.product .product-image {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.product .product-image img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.product .product-info {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.product .product-info .product-title {
+  padding: 10px;
+  width: 95%;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0%;
+  color: #444444;
+  text-align: left;
+  cursor: pointer;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.product .product-info .product-title:hover {
+  color: #39a79d;
+}
+.product .product-info .product-price-box {
+  padding: 10px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: flex-start;
+}
+.product .product-info .product-price-box .price-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0%;
+}
+.product .product-info .product-price-box .price-value,
+.product .product-info .product-price-box .price-currency {
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0%;
+}
+.product .product-button {
+  width: 100%;
+  height: 30px;
+}
+.product .product-button .to-cart {
+  margin: auto;
+  padding-left: 10px;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0%;
+  color: #39a79d;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.product .product-button:hover .to-cart {
+  color: #dca968;
+}/*# sourceMappingURL=itemCard.css.map */

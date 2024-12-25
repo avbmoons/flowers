@@ -139,7 +139,7 @@ body {
   font-weight: 500;
   line-height: 16px;
   letter-spacing: 0%;
-  color: hsl(34, 62%, 64%);
+  color: #dca968;
   text-align: right;
   background: none;
   border: none;
@@ -186,7 +186,7 @@ body {
 .header .header-top .services-box__block .user-box,
 .header .header-top .services-box__block .cart-box {
   margin: auto 0;
-  margin-left: 2%;
+  margin-left: 20px;
   width: auto;
   height: 100%;
   display: flex;
@@ -217,12 +217,25 @@ body {
   height: fit-content;
   padding: 5px;
 }
-.header .header-top .services-box__block .search-box .service-button:focus,
-.header .header-top .services-box__block .user-box .service-button:focus,
-.header .header-top .services-box__block .cart-box .service-button:focus {
-  border: 1px solid #39a79d;
-  border-radius: 5px;
-  box-sizing: border-box;
+.header .header-top .services-box__block .search-box .service-button svg path,
+.header .header-top .services-box__block .user-box .service-button svg path,
+.header .header-top .services-box__block .cart-box .service-button svg path {
+  stroke: #2c817a;
+}
+.header .header-top .services-box__block .search-box .service-button:focus svg path,
+.header .header-top .services-box__block .user-box .service-button:focus svg path,
+.header .header-top .services-box__block .cart-box .service-button:focus svg path {
+  stroke: #dca968;
+}
+.header .header-top .services-box__block .search-box .service-button:hover svg path,
+.header .header-top .services-box__block .user-box .service-button:hover svg path,
+.header .header-top .services-box__block .cart-box .service-button:hover svg path {
+  stroke: #dca968;
+}
+.header .header-top .services-box__block .search-box .to-search:hover svg path,
+.header .header-top .services-box__block .user-box .to-search:hover svg path,
+.header .header-top .services-box__block .cart-box .to-search:hover svg path {
+  stroke: #dca968;
 }
 .header .header-bottom {
   margin: 0 auto;
@@ -253,6 +266,8 @@ body {
   width: 90%;
   height: 100%;
   border: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
   outline: #383838;
   font-size: 14px;
   font-weight: 400;
@@ -283,13 +298,14 @@ body {
   width: 5%;
   height: 100%;
   border: none;
-  outline: none;
+  outline-color: #515151;
   background-color: #515151;
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
   letter-spacing: 0%;
   color: white;
+  cursor: pointer;
 }
 @media only screen and (max-width: 1023px) {
   .header .header-bottom .search-input-box .search-button {
@@ -300,13 +316,16 @@ body {
   width: 5%;
   height: 100%;
   border: none;
-  outline: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  outline-color: #515151;
   background-color: #515151;
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
   letter-spacing: 0%;
-  color: hsl(34, 62%, 64%);
+  color: #dca968;
+  cursor: pointer;
 }
 @media only screen and (max-width: 1023px) {
   .header .header-bottom .search-input-box .search-close {

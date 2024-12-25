@@ -1,6 +1,6 @@
-@use "sass:math";
+@use 'sass:math';
 
-@import "../vars/vars.scss";
+@import '../vars/vars.scss';
 
 * {
   margin: 0;
@@ -57,9 +57,11 @@ body {
       width: fit-content;
       height: 70%;
       @include flex-vertical();
+      gap: 10px;
       .contact {
         @include text-font(14px, 400, 14px, 0%);
         color: white;
+        text-align: right;
       }
     }
     .footer-menu {
@@ -83,7 +85,7 @@ body {
           color: white;
         }
         .menu-item:hover {
-          color: $color-down-accent;
+          color: $color-accent; // $color-down-accent;
         }
       }
     }
@@ -128,10 +130,22 @@ body {
         justify-content: flex-end;
         flex-wrap: wrap;
         .social-item {
-          margin-left: 10px;
+          margin-left: 20px;
           height: 100%;
           img {
             height: inherit;
+          }
+          svg {
+            path {
+              fill: $color-prime-light;
+            }
+          }
+        }
+        .social-item:hover {
+          svg {
+            path {
+              fill: $color-accent;
+            }
           }
         }
       }

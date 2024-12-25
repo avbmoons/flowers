@@ -1,8 +1,8 @@
-@use "sass:math";
+@use 'sass:math';
 
-@import "../header/header.scss";
-@import "../footer/footer.scss";
-@import "../vars/vars.scss";
+@import '../header/header.scss';
+@import '../footer/footer.scss';
+@import '../vars/vars.scss';
 
 * {
   margin: 0;
@@ -40,7 +40,7 @@ body {
         margin: 0 auto;
         margin-top: 2%;
         width: $block-width;
-        height: $slide-height * 0.9; // $block-min-height;
+        height: 85vh; // 0.9 * ($slide-height); // $block-min-height;
         @media only screen and (max-width: 1023px) {
           margin-bottom: 2%;
           height: auto;

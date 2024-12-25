@@ -79,6 +79,7 @@ body {
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
+  gap: 10px;
 }
 .footer .footer-top .footer-contacts .contact {
   font-size: 14px;
@@ -86,6 +87,7 @@ body {
   line-height: 14px;
   letter-spacing: 0%;
   color: white;
+  text-align: right;
 }
 .footer .footer-top .footer-menu {
   margin: auto 0;
@@ -117,7 +119,7 @@ body {
   color: white;
 }
 .footer .footer-top .footer-menu .menu-box .menu-item:hover {
-  color: #d39341;
+  color: #dca968;
 }
 .footer .footer-bottom {
   margin: 0 auto;
@@ -185,9 +187,15 @@ body {
   flex-wrap: wrap;
 }
 .footer .footer-bottom .footer-socials .socials .social-item {
-  margin-left: 10px;
+  margin-left: 20px;
   height: 100%;
 }
 .footer .footer-bottom .footer-socials .socials .social-item img {
   height: inherit;
+}
+.footer .footer-bottom .footer-socials .socials .social-item svg path {
+  fill: #e4f2f1;
+}
+.footer .footer-bottom .footer-socials .socials .social-item:hover svg path {
+  fill: #dca968;
 }/*# sourceMappingURL=footer.css.map */
