@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flowers.product</title>
     <link rel="stylesheet" href="../styles/product/product.css" />
+    <script src="../data/catalog.js"></script>
+    <script defer src="../scripts/productShow.js"></script>
+    <script defer src="../scripts/featuredList.js"></script>
+    <script defer src="../scripts/counterOne.js"></script>
     <script defer src="../scripts/showSearch.js"></script>
     <script defer src="../scripts/showMenu.js"></script>
     <script src="../scripts/toCart.js"></script>
@@ -129,6 +133,7 @@
                         stroke-linejoin="round"
                       />
                     </svg>
+                    <div class="cart-num" id="cartBtnNum">0</div>
                   </button>
                 </div>
               </div>
@@ -158,19 +163,52 @@
           <section class="product-block">
             <div class="product" data-id="11">
               <div class="product-image" data-id="11">
-                <img src="../assets/catalog/item-11.png" alt="photo" />
+                <img src="#" alt="photo" id="productImage" />
               </div>
               <div class="product-box">
                 <div class="product-info" data-id="11">
-                  <a class="product-title" href="#">Lorem ipsum dolor sit</a>
-                  <p class="product-description">
+                  <a class="product-title" href="#" id="productName"></a>
+                  <p class="product-resume" id="productResume"></p>
+                  <div class="product-size-box">
+                    <div class="size-box">
+                      <p class="size">Width, cm:</p>
+                      <p class="size" id="productWidth"></p>
+                    </div>
+                    <div class="size-box">
+                      <p class="size height">Height, cm:</p>
+                      <p class="size" id="productHeight"></p>
+                    </div>
+                  </div>
+                  <p class="product-description" id="productDescription">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                     Expedita repellat harum vitae sequi deleniti rem eveniet
                     voluptas suscipit hic labore! Lorem, ipsum dolor sit amet
                     consectetur adipisicing elit. Expedita repellat harum vitae
                     sequi deleniti rem eveniet voluptas suscipit hic labore!
                   </p>
-                  <div class="product-choose-box">
+                  <!-- <div class="product-size-box">
+                    <div class="size-box">
+                      <p class="size">Width, cm:</p>
+                      <p class="size" id="productWidth">40</p>
+                    </div>
+                    <div class="size-box">
+                      <p class="size height">Height, cm:</p>
+                      <p class="size" id="productHeight">30</p>
+                    </div>
+                  </div> -->
+                  <div class="product-price-box">
+                    <div class="price-origin-box">
+                      <!-- <p class="price-origin">Price:</p> -->
+                      <p class="price-origin" id="productPriceOrigin">32</p>
+                      <p class="price-origin" id="currencyOrigin">&euro;</p>
+                    </div>
+                    <div class="price-active-box">
+                      <!-- <p class="price-active">Price:</p> -->
+                      <p class="price-active" id="productPriceActive">29</p>
+                      <p class="price-active" id="currencyActive">&euro;</p>
+                    </div>
+                  </div>
+                  <!-- <div class="product-choose-box">
                     <div class="product-choose">
                       <div class="choose-input">
                         <input
@@ -213,20 +251,34 @@
                         <p class="price-currency">&euro;</p>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
                 <div class="product-purchase" data-id="11">
                   <div class="counter-box">
                     <div class="counter">
-                      <button class="counter-minus">-</button>
-                      <input class="counter-value" type="text" value="1" />
-                      <button class="counter-plus">+</button>
+                      <button
+                        class="counter-minus"
+                        data-id="11"
+                        data-action="minus"
+                      >
+                        -
+                      </button>
+                      <input
+                        class="counter-value"
+                        id="counterValue"
+                        type="text"
+                        value="1"
+                        readonly
+                        min="1"
+                        data-id="11"
+                      />
+                      <button class="counter-plus" data-action="plus">+</button>
                     </div>
                   </div>
                   <div class="total-box">
                     <div class="total-price">
-                      <p class="total-text">Total price:</p>
-                      <p class="total-value">18</p>
+                      <p class="total-text">Total amount:</p>
+                      <p class="total-value" id="initAmount">29</p>
                       <p class="total-currency">&euro;</p>
                     </div>
                   </div>
@@ -239,88 +291,7 @@
             <div class="featured__heading">
               <p class="heading-prime">Also see items</p>
             </div>
-            <div class="featured__block">
-              <div class="product" data-id="11">
-                <div class="product-image" data-id="11">
-                  <img src="../assets/catalog/item-11.png" alt="photo" />
-                </div>
-                <div class="product-info" data-id="11">
-                  <a class="product-title" href="#">Lorem ipsum dolor sit</a>
-                  <div class="product-price-box">
-                    <p class="price-text">from</p>
-                    <p class="price-value">12</p>
-                    <p class="price-currency">&euro;</p>
-                  </div>
-                </div>
-                <div class="product-button" data-id="11">
-                  <button class="to-cart" type="button">Add to cart</button>
-                </div>
-              </div>
-              <div class="product" data-id="12">
-                <div class="product-image" data-id="12">
-                  <img src="../assets/catalog/item-12.png" alt="photo" />
-                </div>
-                <div class="product-info" data-id="12">
-                  <a class="product-title" href="#">Lorem ipsum dolor sit</a>
-                  <div class="product-price-box">
-                    <p class="price-text">from</p>
-                    <p class="price-value">22</p>
-                    <p class="price-currency">&euro;</p>
-                  </div>
-                </div>
-                <div class="product-button" data-id="12">
-                  <button class="to-cart" type="button">Add to cart</button>
-                </div>
-              </div>
-              <div class="product" data-id="13">
-                <div class="product-image" data-id="13">
-                  <img src="../assets/catalog/item-13.png" alt="photo" />
-                </div>
-                <div class="product-info" data-id="13">
-                  <a class="product-title" href="#">Lorem ipsum dolor sit</a>
-                  <div class="product-price-box">
-                    <p class="price-text">from</p>
-                    <p class="price-value">23</p>
-                    <p class="price-currency">&euro;</p>
-                  </div>
-                </div>
-                <div class="product-button" data-id="13">
-                  <button class="to-cart" type="button">Add to cart</button>
-                </div>
-              </div>
-              <div class="product" data-id="14">
-                <div class="product-image" data-id="14">
-                  <img src="../assets/catalog/item-14.png" alt="photo" />
-                </div>
-                <div class="product-info" data-id="14">
-                  <a class="product-title" href="#">Lorem ipsum dolor sit</a>
-                  <div class="product-price-box">
-                    <p class="price-text">from</p>
-                    <p class="price-value">24</p>
-                    <p class="price-currency">&euro;</p>
-                  </div>
-                </div>
-                <div class="product-button" data-id="14">
-                  <button class="to-cart" type="button">Add to cart</button>
-                </div>
-              </div>
-              <div class="product" data-id="15">
-                <div class="product-image" data-id="15">
-                  <img src="../assets/catalog/item-15.png" alt="photo" />
-                </div>
-                <div class="product-info" data-id="15">
-                  <a class="product-title" href="#">Lorem ipsum dolor sit</a>
-                  <div class="product-price-box">
-                    <p class="price-text">from</p>
-                    <p class="price-value">17</p>
-                    <p class="price-currency">&euro;</p>
-                  </div>
-                </div>
-                <div class="product-button" data-id="15">
-                  <button class="to-cart" type="button">Add to cart</button>
-                </div>
-              </div>
-            </div>
+            <div class="featured__block"></div>
           </section>
         </main>
       </div>

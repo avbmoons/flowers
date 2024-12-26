@@ -208,6 +208,7 @@ body {
   justify-content: center;
   box-sizing: border-box;
   cursor: pointer;
+  position: relative;
 }
 .header .header-top .services-box__block .search-box .service-button img,
 .header .header-top .services-box__block .user-box .service-button img,
@@ -222,6 +223,25 @@ body {
 .header .header-top .services-box__block .user-box .service-button svg path,
 .header .header-top .services-box__block .cart-box .service-button svg path {
   stroke: #2c817a;
+}
+.header .header-top .services-box__block .search-box .service-button .cart-num,
+.header .header-top .services-box__block .user-box .service-button .cart-num,
+.header .header-top .services-box__block .cart-box .service-button .cart-num {
+  position: absolute;
+  background-color: #ff5555;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  align-items: center;
+  color: #e4f2f1;
+  font-size: 16px;
+  font-weight: 500;
+  position: absolute;
+  top: -5px;
+  right: -5px;
 }
 .header .header-top .services-box__block .search-box .service-button:focus svg path,
 .header .header-top .services-box__block .user-box .service-button:focus svg path,
@@ -766,6 +786,7 @@ body {
   justify-content: center;
   box-sizing: border-box;
   cursor: pointer;
+  position: relative;
 }
 .wrapper .top .header .header-top .services-box__block .search-box .service-button img,
 .wrapper .top .header .header-top .services-box__block .user-box .service-button img,
@@ -780,6 +801,25 @@ body {
 .wrapper .top .header .header-top .services-box__block .user-box .service-button svg path,
 .wrapper .top .header .header-top .services-box__block .cart-box .service-button svg path {
   stroke: #2c817a;
+}
+.wrapper .top .header .header-top .services-box__block .search-box .service-button .cart-num,
+.wrapper .top .header .header-top .services-box__block .user-box .service-button .cart-num,
+.wrapper .top .header .header-top .services-box__block .cart-box .service-button .cart-num {
+  position: absolute;
+  background-color: #ff5555;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  align-items: center;
+  color: #e4f2f1;
+  font-size: 16px;
+  font-weight: 500;
+  position: absolute;
+  top: -5px;
+  right: -5px;
 }
 .wrapper .top .header .header-top .services-box__block .search-box .service-button:focus svg path,
 .wrapper .top .header .header-top .services-box__block .user-box .service-button:focus svg path,

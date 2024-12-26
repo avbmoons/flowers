@@ -154,6 +154,7 @@ body {
             outline: none;
             @include flex-vertical();
             cursor: pointer;
+            position: relative;
             img {
               margin: auto;
               width: auto;
@@ -164,6 +165,21 @@ body {
               path {
                 stroke: $color-down;
               }
+            }
+            .cart-num {
+              position: absolute;
+              background-color: $color-stock-banner; // #d62240;
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              @include flex-horizontal();
+              align-items: center;
+              color: $color-prime-light;
+              font-size: 16px;
+              font-weight: 500;
+              position: absolute;
+              top: -5px; // -15px;
+              right: -5px;
             }
             // svg:hover {
             //   path {
