@@ -128,7 +128,7 @@ body {
                   text-align: justify;
                 }
                 text-decoration: none;
-                @include text-font(16px, 400, 20px, 0%);
+                @include text-font(16px, 400, 16px, 0%);
                 color: $color-font;
               }
               .product-description {
@@ -305,7 +305,7 @@ body {
                 @include flex-vertical();
                 //border: 1px solid red;
                 .counter {
-                  margin: 0 auto;
+                  margin: 0; // 0 auto;
                   width: 75%;
                   height: fit-content;
                   vertical-align: middle;

@@ -3,22 +3,25 @@ document.onclick = (event) => {
   let countId = event.target.getAttribute('data-id');
   let countEls = document.querySelectorAll('input[data-id]');
   let costEls = document.querySelectorAll('p[data-id]');
-  let totalEls = document.querySelectorAll('.total-active');
-
+  let totalEls = document.querySelectorAll('.total-value');
   let totalAmount = document.querySelector('#cartCostTotal');
+  //console.log(totalAmount);
 
   needInput = inputFunction(countEls, countId);
 
-  let priceOrigin = priceOriginFunction(costEls, countId);
-  let priceOriginValue = priceOrigin.innerHTML;
+  // let priceOrigin = priceOriginFunction(costEls, countId);
+  // console.log(priceOrigin);
+  // let priceOriginValue = priceOrigin.innerHTML;
 
   let priceActive = priceActiveFunction(costEls, countId);
+
   let priceActiveValue = priceActive.innerHTML;
 
-  let totalOrigin = totalOriginFunction(costEls, countId);
-  let totalOriginValue = totalOrigin.innerHTML;
+  // let totalOrigin = totalOriginFunction(costEls, countId);
+  // let totalOriginValue = totalOrigin.innerHTML;
 
   let totalActive = totalActiveFunction(costEls, countId);
+  //console.log(totalActive);
   let totalActiveValue = totalActive.innerHTML;
 
   if (event.target.classList.contains('counter-plus')) {
@@ -28,13 +31,13 @@ document.onclick = (event) => {
   }
   let quantity = needInput.value;
 
-  totalOriginValue = quantity * priceOriginValue;
-  totalOrigin.innerHTML = toFixed(totalOriginValue, 2);
+  // totalOriginValue = quantity * priceOriginValue;
+  // totalOrigin.innerHTML = toFixed(totalOriginValue, 2);
 
   totalActiveValue = quantity * priceActiveValue;
   totalActive.innerHTML = toFixed(totalActiveValue, 2);
 
-  totalAmountValue = totalAmountFunction(totalEls);
+  let totalAmountValue = totalAmountFunction(totalEls);
   totalAmount.innerHTML = toFixed(totalAmountValue, 2);
 };
 
@@ -81,7 +84,7 @@ function totalActiveFunction(arr, needId) {
   for (i = 0; i < arr.length; i++) {
     let countId = arr[i].getAttribute('data-id');
     let attrClass = arr[i].className;
-    if (countId == needId && attrClass == 'total-active') {
+    if (countId == needId && attrClass == 'total-value') {
       return arr[i];
     }
   }
@@ -120,11 +123,11 @@ const minusFunction = (countInput) => {
   }
 };
 
-let cartBtnNum = document.querySelector('#cartBtnNum');
-let headingCounter = document.querySelector('#headingCounter');
-let headingNum = headingCounter.textContent;
+// let cartBtnNum = document.querySelector('#cartBtnNum');
+// let headingCounter = document.querySelector('#headingCounter');
+// let headingNum = headingCounter.textContent;
 
-headingNum = cartBtnNum.textContent;
+// headingNum = cartBtnNum.textContent;
 
-headingCounter.textContent = headingNum;
-headingCounter.innerHTML;
+// headingCounter.textContent = headingNum;
+// headingCounter.innerHTML;

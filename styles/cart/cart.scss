@@ -36,26 +36,93 @@ body {
       min-height: $main-min-height;
       @include flex-vertical();
       justify-content: flex-start;
+      .cart-heading {
+        margin: 20px auto;
+        //margin-bottom: 20px;
+        width: 0.8 * $block-width;
+        height: fit-content;
+        //border: 1px solid red;
+        @include flex-horizontal();
+        justify-content: space-between;
+        .heading-prime {
+          margin: 0;
+          padding: 10px;
+          @include text-font(20px, 600, 20px, 0%);
+          color: $color-down;
+          //border: 2px solid blue;
+        }
+        .heading-counter {
+          margin: 0;
+          padding: 10px;
+          margin-left: 20px;
+          width: fit-content; // auto;
+          height: fit-content;
+          @include flex-horizontal();
+          text-align: center;
+          //border: 2px solid blue;
+          &__value {
+            margin: 0 auto;
+            height: auto; // fit-content;
+            @include text-font(28px, 600, 28px, 0);
+            text-align: right;
+            color: $color-prime;
+          }
+          &__label {
+            margin: 0 auto;
+            margin-left: 10px;
+            height: auto;
+            @include text-font(20px, 400, 28px, 0);
+            //line-height: 28px;
+            color: $color-prime;
+          }
+        }
+      }
       .cart-list {
         margin: 0 auto;
         margin-bottom: 1%;
-        width: $block-width;
-        min-height: 85vh; // $slide-height * 0.9;
+        width: 0.8 * $block-width;
+        min-height: $cart-item-height; // 85vh; // $slide-height * 0.9;
         @include flex-vertical();
         justify-content: flex-start;
         &__heading {
-          margin: 0 auto;
-          margin-bottom: 20px;
+          margin: 20px auto;
+          //margin-bottom: 20px;
           width: 100%;
           height: fit-content;
           //border: 1px solid red;
           @include flex-horizontal();
           justify-content: space-between;
           .heading-prime {
+            margin: 0;
             padding: 10px;
             @include text-font(20px, 600, 20px, 0%);
             color: $color-down;
             //border: 2px solid blue;
+          }
+          .heading-counter {
+            margin: 0;
+            padding: 10px;
+            margin-left: 20px;
+            width: fit-content; // auto;
+            height: fit-content;
+            @include flex-horizontal();
+            text-align: center;
+            //border: 2px solid blue;
+            &__value {
+              margin: 0 auto;
+              height: auto; // fit-content;
+              @include text-font(28px, 600, 28px, 0);
+              text-align: right;
+              color: $color-prime;
+            }
+            &__label {
+              margin: 0 auto;
+              margin-left: 10px;
+              height: auto;
+              @include text-font(20px, 400, 28px, 0);
+              //line-height: 28px;
+              color: $color-prime;
+            }
           }
         }
         .product {
@@ -84,7 +151,8 @@ body {
           }
           .product-box {
             margin: 0 auto;
-            min-width: 80%;
+            //min-width: 80%;
+            max-width: 80%;
             //width: auto;
             height: 100%;
             @include flex-horizontal();
@@ -98,7 +166,7 @@ body {
             .product-info {
               margin: auto 0;
               //padding: 1% 5%;
-              width: 50%; // inherit;
+              width: 40%; // 30%; // 50%; // inherit;
               height: 70%;
               @include flex-horizontal();
               @media only screen and (max-width: 767px) {
@@ -110,8 +178,9 @@ body {
               //border: 1px solid red;
               .product-title {
                 margin: auto 0;
+                padding: 0 10px;
                 //margin-bottom: 2%;
-                width: 50%; //;
+                width: 80%; // 90%; // 80%; // 50%; //;
                 height: 100%; // 20%;
                 @media only screen and (max-width: 767px) {
                   margin-bottom: 3%;
@@ -120,9 +189,85 @@ body {
                 }
                 @include flex-vertical();
                 text-decoration: none;
-                @include text-font(22px, 500, 22px, 0%);
+                @include text-font(18px, 500, 18px, 0%);
                 color: $color-prime;
                 //border: 1px solid violet;
+              }
+              .price-box {
+                margin: 0 auto;
+                width: 20%; // 15%;
+                height: 100%; // inherit;
+                //@include flex-vertical();
+                //@include flex-horizontal();
+                @include flex-vertical();
+                @include text-font(16px, 500, 16px, 0%);
+                color: $color-prime;
+                //border: 1px solid violet;
+                @media only screen and (max-width: 1023px) {
+                  display: none;
+                }
+                .price-origin-box {
+                  margin: 0 auto;
+                  @include flex-horizontal();
+                  .price-origin {
+                    margin: 0 auto;
+                    @include text-font(16px, 500, 16px, 0%);
+                    font-style: italic;
+                    text-decoration: line-through;
+                    text-align: center;
+                    color: $color-font;
+                  }
+                  .currency {
+                    margin: 0 auto;
+                    @include text-font(16px, 500, 16px, 0%);
+                    font-style: italic;
+                    text-decoration: line-through;
+                    text-align: center;
+                    color: $color-font;
+                  }
+                }
+                .price-active-box {
+                  margin: 0 auto;
+                  @include flex-horizontal();
+                  .price-active {
+                    margin: 0 auto;
+                    @include text-font(18px, 500, 18px, 0%);
+                    text-align: center;
+                    color: $color-font;
+                  }
+                  .currency {
+                    margin: 0 auto;
+                    @include text-font(18px, 500, 18px, 0%);
+                    text-align: center;
+                    color: $color-font;
+                  }
+                }
+              }
+              .product-size-box {
+                margin: auto 0;
+                margin-top: 10px;
+                margin-bottom: 20px;
+                width: 50%; //100%;
+                height: 100%; // fit-content; // 10%; // fit-content; // 40px; // fit-content;
+                //@include flex-horizontal();
+                @include flex-vertical();
+                justify-content: center; // flex-start;
+                //border: 2px solid green;
+                .size-box {
+                  margin: auto 0;
+                  //margin: 0 auto;
+                  width: 100%;
+                  height: 100%;
+                  @include flex-horizontal();
+                  justify-content: flex-start;
+                  //border: 1px solid orange;
+                  .size {
+                    margin-right: 10px;
+                    @include text-font(16px, 400, 20px, 0);
+                    text-align: left;
+                    color: $color-prime-dark;
+                  }
+                }
               }
               .product-choose-box {
                 margin: auto 0;
@@ -187,8 +332,8 @@ body {
             .product-purchase {
               margin: auto 0;
               //padding: 1% 5%;
-              //padding-left: 3%;
-              width: 50%; // inherit;
+              padding-left: 10px; // 3%;
+              width: 60%; // 70%; // 50%; // inherit;
               height: 70%; // 30%;
               @include flex-horizontal();
               justify-content: flex-start;
@@ -244,7 +389,7 @@ body {
               }
               .total-box {
                 margin: auto;
-                width: 40%; // 40%; // fit-content; // 20%;
+                width: 50%; // 40%; // fit-content; // 20%;
                 height: 30%;
                 @include flex-vertical();
                 //border: 1px solid violet;
@@ -257,14 +402,14 @@ body {
                   .total-text {
                     margin: auto 0;
                     margin-right: 5%;
-                    width: 30%;
-                    @include text-font(18px, 600, 18px, 0%);
+                    width: 50%; // 30%;
+                    @include text-font(16px, 600, 16px, 0%);
                     //border: 1px solid violet;
                   }
                   .total-value {
                     margin: auto 0;
                     margin-right: 2%;
-                    width: 60%;
+                    width: 50%; // 60%;
                     @include text-font(18px, 600, 18px, 0%);
                     text-align: right;
                     //border: 1px solid violet;
@@ -298,7 +443,7 @@ body {
                 background-color: $color-hover;
                 color: $color-hover-accent;
               }
-              .close-button {
+              .delete-button {
                 margin: auto;
                 width: 10%;
                 height: 30%;
@@ -308,11 +453,12 @@ body {
                 @include text-font(18px, 500, 18px, 0%);
                 color: $color-accent;
                 cursor: pointer;
+                //border: 1px solid violet;
               }
-              .close-button:hover {
+              .delete-button:hover {
                 color: $color-prime;
               }
-              .close-button:focus {
+              .delete-button:focus {
                 border: 1px solid $color-font;
                 border-radius: 5px;
                 color: $color-prime;
@@ -323,36 +469,38 @@ body {
       }
       .cart-total {
         margin: 0 auto;
-        margin-bottom: 2%;
-        width: $block-width;
+        margin-bottom: 20px; // 2%;
+        width: 0.8 * $block-width;
         height: auto;
         @include flex-vertical();
         &__block {
           margin: 0 auto;
-          margin-bottom: 2%;
+          margin-bottom: 20px; // 2%;
           width: 100%;
           height: auto;
           @include flex-horizontal();
           justify-content: flex-end;
+          border: 1px solid orange;
           .grandtotal-text {
             @include text-font(22px, 500, 22px, 0%);
           }
           .grandtotal-value {
-            margin-left: 1%;
+            margin-left: 40px; // 2%;
             @include text-font(24px, 600, 24px, 0%);
           }
           .grandtotal-currency {
-            margin-left: 1%;
+            margin-left: 20px; // 1%;
             @include text-font(22px, 500, 22px, 0%);
           }
         }
         .total-button {
           margin: auto 0;
-          padding: 1% 2%;
-          width: 12vw;
+          padding: 20px 40px; // 1% 2%;
+          width: fit-content; // 12vw;
           @media only screen and (max-width: 767px) {
-            margin-bottom: 3%;
-            padding: 3% 5%;
+            // margin-bottom: 3%;
+            // padding: 3% 5%;
+            margin: 0 auto;
             width: 42vw;
             height: auto;
           }

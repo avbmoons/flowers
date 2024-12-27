@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flowers.cart</title>
     <link rel="stylesheet" href="../styles/cart/cart.css" />
+    <script defer src="../scripts/cartList.js"></script>
+    <script defer src="../scripts/counter.js"></script>
     <script defer src="../scripts/showSearch.js"></script>
     <script defer src="../scripts/showMenu.js"></script>
     <script src="../scripts/toCart.js"></script>
@@ -158,211 +160,21 @@
           </section>
         </header>
         <main class="main">
-          <section class="cart-list">
-            <div class="cart-list__heading">
-              <p class="heading-prime">Your shopping list</p>
+          <div class="cart-heading">
+            <p class="heading-prime">Your shopping list</p>
+            <div class="heading-counter">
+              <p class="heading-counter__value" id="headingCounter">3</p>
+              <p class="heading-counter__label">stuff</p>
             </div>
-            <div class="product" data-id="11">
-              <div class="product-image" data-id="11">
-                <img src="../assets/catalog/item-11.png" alt="photo" />
-              </div>
-              <div class="product-box">
-                <div class="product-info" data-id="11">
-                  <a class="product-title" href="#">Lorem ipsum dolor sit</a>
-                  <div class="product-choose-box">
-                    <div class="product-choose">
-                      <div class="choose-input">
-                        <input
-                          type="radio"
-                          name="item-11"
-                          value="choose-1"
-                          checked
-                        />
-                        <label for="choose-1">Big</label>
-                      </div>
-                      <div class="product-price-box">
-                        <p class="price-value">18</p>
-                        <p class="price-currency">&euro;</p>
-                      </div>
-                    </div>
-                    <div class="product-choose">
-                      <div class="choose-input">
-                        <input type="radio" name="item-11" value="choose-2" />
-                        <label for="choose-2">Middle</label>
-                      </div>
-                      <div class="product-price-box">
-                        <p class="price-value">15</p>
-                        <p class="price-currency">&euro;</p>
-                      </div>
-                    </div>
-                    <div class="product-choose">
-                      <div class="choose-input">
-                        <input type="radio" name="item-11" value="choose-3" />
-                        <label for="choose-3">Small</label>
-                      </div>
-                      <div class="product-price-box">
-                        <p class="price-value">12</p>
-                        <p class="price-currency">&euro;</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="product-purchase" data-id="11">
-                  <div class="counter-box">
-                    <div class="counter">
-                      <button class="counter-minus">-</button>
-                      <input class="counter-value" type="text" value="1" />
-                      <button class="counter-plus">+</button>
-                    </div>
-                  </div>
-                  <div class="total-box">
-                    <div class="total-price">
-                      <p class="total-text">Total price:</p>
-                      <p class="total-value">18</p>
-                      <p class="total-currency">&euro;</p>
-                    </div>
-                  </div>
-                  <!-- <button class="buy-button" type="button">Buy</button> -->
-                  <button class="close-button">&#10006;</button>
-                </div>
-              </div>
-            </div>
-            <div class="product" data-id="12">
-              <div class="product-image" data-id="12">
-                <img src="../assets/catalog/item-12.png" alt="photo" />
-              </div>
-              <div class="product-box">
-                <div class="product-info" data-id="12">
-                  <a class="product-title" href="#">Lorem ipsum dolor sit</a>
-                  <div class="product-choose-box">
-                    <div class="product-choose">
-                      <div class="choose-input">
-                        <input
-                          type="radio"
-                          name="item-12"
-                          value="choose-1"
-                          checked
-                        />
-                        <label for="choose-1">Big</label>
-                      </div>
-                      <div class="product-price-box">
-                        <p class="price-value">9</p>
-                        <p class="price-currency">&euro;</p>
-                      </div>
-                    </div>
-                    <div class="product-choose">
-                      <div class="choose-input">
-                        <input type="radio" name="item-12" value="choose-2" />
-                        <label for="choose-2">Middle</label>
-                      </div>
-                      <div class="product-price-box">
-                        <p class="price-value">7</p>
-                        <p class="price-currency">&euro;</p>
-                      </div>
-                    </div>
-                    <div class="product-choose">
-                      <div class="choose-input">
-                        <input type="radio" name="item-12" value="choose-3" />
-                        <label for="choose-3">Small</label>
-                      </div>
-                      <div class="product-price-box">
-                        <p class="price-value">3</p>
-                        <p class="price-currency">&euro;</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="product-purchase" data-id="12">
-                  <div class="counter-box">
-                    <div class="counter">
-                      <button class="counter-minus">-</button>
-                      <input class="counter-value" type="text" value="1" />
-                      <button class="counter-plus">+</button>
-                    </div>
-                  </div>
-                  <div class="total-box">
-                    <div class="total-price">
-                      <p class="total-text">Total price:</p>
-                      <p class="total-value">9</p>
-                      <p class="total-currency">&euro;</p>
-                    </div>
-                  </div>
-                  <!-- <button class="buy-button" type="button">Buy</button> -->
-                  <button class="close-button">&#10006;</button>
-                </div>
-              </div>
-            </div>
-            <div class="product" data-id="13">
-              <div class="product-image" data-id="13">
-                <img src="../assets/catalog/item-13.png" alt="photo" />
-              </div>
-              <div class="product-box">
-                <div class="product-info" data-id="13">
-                  <a class="product-title" href="#">Lorem ipsum dolor sit</a>
-                  <div class="product-choose-box">
-                    <div class="product-choose">
-                      <div class="choose-input">
-                        <input
-                          type="radio"
-                          name="item-13"
-                          value="choose-1"
-                          checked
-                        />
-                        <label for="choose-1">Big</label>
-                      </div>
-                      <div class="product-price-box">
-                        <p class="price-value">21</p>
-                        <p class="price-currency">&euro;</p>
-                      </div>
-                    </div>
-                    <div class="product-choose">
-                      <div class="choose-input">
-                        <input type="radio" name="item-13" value="choose-2" />
-                        <label for="choose-2">Middle</label>
-                      </div>
-                      <div class="product-price-box">
-                        <p class="price-value">18</p>
-                        <p class="price-currency">&euro;</p>
-                      </div>
-                    </div>
-                    <div class="product-choose">
-                      <div class="choose-input">
-                        <input type="radio" name="item-13" value="choose-3" />
-                        <label for="choose-3">Small</label>
-                      </div>
-                      <div class="product-price-box">
-                        <p class="price-value">16</p>
-                        <p class="price-currency">&euro;</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="product-purchase" data-id="13">
-                  <div class="counter-box">
-                    <div class="counter">
-                      <button class="counter-minus">-</button>
-                      <input class="counter-value" type="text" value="1" />
-                      <button class="counter-plus">+</button>
-                    </div>
-                  </div>
-                  <div class="total-box">
-                    <div class="total-price">
-                      <p class="total-text">Total price:</p>
-                      <p class="total-value">21</p>
-                      <p class="total-currency">&euro;</p>
-                    </div>
-                  </div>
-                  <!-- <button class="buy-button" type="button">Buy</button> -->
-                  <button class="close-button">&#10006;</button>
-                </div>
-              </div>
-            </div>
-          </section>
+          </div>
+          <section class="cart-list"></section>
           <section class="cart-total">
             <div class="cart-total__block">
               <p class="grandtotal-text">Cart total:</p>
-              <p class="grandtotal-value">48</p>
-              <p class="grandtotal-currency">&euro;</p>
+              <p class="grandtotal-value" id="cartCostTotal">0</p>
+              <p class="grandtotal-currency" id="cartCostTotalCurrency">
+                &euro;
+              </p>
             </div>
             <button class="total-button" type="button" onclick="toOrder()">
               Get order
@@ -473,3 +285,65 @@
     </div>
   </body>
 </html>
+
+<!-- <div class="product" data-id="11">
+  <div class="product-image" data-id="11">
+    <img src="../assets/catalog/item-11.png" alt="photo" />
+  </div>
+  <div class="product-box">
+    <div class="product-info" data-id="11">
+      <a class="product-title" href="#">Lorem ipsum dolor sit</a>
+      <div class="price-box">
+        <div class="price-active-box">
+          <p class="price-active">18</p>
+          <p class="currency">&euro;</p>
+        </div>
+      </div>
+    </div>
+    <div class="product-purchase" data-id="11">
+      <div class="counter-box">
+        <div class="counter">
+          <button class="counter-minus">-</button>
+          <input class="counter-value" type="text" value="1" />
+          <button class="counter-plus">+</button>
+        </div>
+      </div>
+      <div class="total-box">
+        <div class="total-price">
+          <p class="total-text">Total price:</p>
+          <p class="total-value">18</p>
+          <p class="total-currency">&euro;</p>
+        </div>
+      </div>
+      <button class="close-button">&#10006;</button>
+    </div>
+  </div>
+</div> -->
+
+<!-- <div class="product" data-id="13">
+  <div class="product-image" data-id="13">
+    <img src="../assets/catalog/item-13.png" alt="photo" />
+  </div>
+  <div class="product-box">
+    <div class="product-info" data-id="13">
+      <a class="product-title" href="#">Lorem ipsum dolor sit</a>
+    </div>
+    <div class="product-purchase" data-id="13">
+      <div class="counter-box">
+        <div class="counter">
+          <button class="counter-minus">-</button>
+          <input class="counter-value" type="text" value="1" />
+          <button class="counter-plus">+</button>
+        </div>
+      </div>
+      <div class="total-box">
+        <div class="total-price">
+          <p class="total-text">Total price:</p>
+          <p class="total-value">21</p>
+          <p class="total-currency">&euro;</p>
+        </div>
+      </div>
+      <button class="close-button">&#10006;</button>
+    </div>
+  </div>
+</div> -->
