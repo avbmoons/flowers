@@ -37,7 +37,7 @@ class CatalogItem {
   render() {
     return `<div class="product" data-id="${this.id}">
     <div class="product-image" data-id="${this.id}">
-      <img src="${this.image}" id="image-${this.id}" alt="photo" />
+      <img class="item-image" src="${this.image}" id="image-${this.id}" alt="photo" />
     </div>
     <div class="product-info" data-id="${this.id}">
       <a class="product-title" href="./product.html?id=" id="product${this.id}"

@@ -22,6 +22,9 @@ body {
   justify-content: center;
   box-sizing: border-box;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  background-color: white;
 }
 .header .header-top {
   margin: 0 auto;
@@ -600,6 +603,9 @@ body {
   justify-content: center;
   box-sizing: border-box;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  background-color: white;
 }
 .wrapper .top .header .header-top {
   margin: 0 auto;
@@ -933,6 +939,7 @@ body {
 }
 .wrapper .top .main {
   margin: 0 auto;
+  margin-top: 15vh;
   margin-top: 40px;
   width: 100%;
   min-height: 100vh- 15vh;

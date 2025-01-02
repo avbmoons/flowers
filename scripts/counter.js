@@ -5,23 +5,15 @@ document.onclick = (event) => {
   let costEls = document.querySelectorAll('p[data-id]');
   let totalEls = document.querySelectorAll('.total-value');
   let totalAmount = document.querySelector('#cartCostTotal');
-  //console.log(totalAmount);
 
   needInput = inputFunction(countEls, countId);
-
-  // let priceOrigin = priceOriginFunction(costEls, countId);
-  // console.log(priceOrigin);
-  // let priceOriginValue = priceOrigin.innerHTML;
 
   let priceActive = priceActiveFunction(costEls, countId);
 
   let priceActiveValue = priceActive.innerHTML;
 
-  // let totalOrigin = totalOriginFunction(costEls, countId);
-  // let totalOriginValue = totalOrigin.innerHTML;
-
   let totalActive = totalActiveFunction(costEls, countId);
-  //console.log(totalActive);
+
   let totalActiveValue = totalActive.innerHTML;
 
   if (event.target.classList.contains('counter-plus')) {
@@ -30,9 +22,6 @@ document.onclick = (event) => {
     minusFunction(needInput);
   }
   let quantity = needInput.value;
-
-  // totalOriginValue = quantity * priceOriginValue;
-  // totalOrigin.innerHTML = toFixed(totalOriginValue, 2);
 
   totalActiveValue = quantity * priceActiveValue;
   totalActive.innerHTML = toFixed(totalActiveValue, 2);
@@ -99,7 +88,6 @@ function totalAmountFunction(arr) {
   for (i = 0; i < arr.length; i++) {
     sum = sum + Number(arr[i].innerHTML);
   }
-  //console.log(sum);
   return sum;
 }
 
@@ -123,11 +111,3 @@ const minusFunction = (countInput) => {
   }
 };
 
-// let cartBtnNum = document.querySelector('#cartBtnNum');
-// let headingCounter = document.querySelector('#headingCounter');
-// let headingNum = headingCounter.textContent;
-
-// headingNum = cartBtnNum.textContent;
-
-// headingCounter.textContent = headingNum;
-// headingCounter.innerHTML;

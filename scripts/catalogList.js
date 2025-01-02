@@ -1,4 +1,36 @@
 const data = catalog;
+let dataLength = data.length;
+//console.log(dataLength);
+
+let categoryName = new URLSearchParams(window.location.search).get('category');
+console.log(categoryName);
+
+let pageTitleText;
+let pageCategory;
+
+for (let i=0; i<dataLength; i++) {
+  let thisCategory;
+  if (data[i].category == categoryName) {
+    thisCategory = data[i];
+    pageTitleText = thisCategory.category;
+    pageCategory = thisCategory.category;
+    //console.log(pageCategory);
+    //console.log(pageTitleText);
+  } else {
+    console.log('No category');
+  }
+}
+
+let pageTitle = document.getElementById('headingPrime');
+console.log(pageTitleText);
+
+if (pageTitleText == 'Bouquets') {
+  pageTitle.innerHTML = pageTitleText + '&Flowers';
+} else {
+  pageTitle.innerHTML = pageTitleText + "&Cards";
+}
+
+//pageTitle.innerHTML = pageTitleText;
 
 class CatalogItem {
   constructor(
@@ -37,7 +69,7 @@ class CatalogItem {
   render() {
     return `<div class="product" data-id="${this.id}">
     <div class="product-image" data-id="${this.id}">
-      <img src="${this.image}" id="image-${this.id}" alt="photo" />
+      <img class="item-image" src="${this.image}" id="image-${this.id}" alt="photo" />
     </div>
     <div class="product-info" data-id="${this.id}">
       <a class="product-title" href="./product.html?id=" id="product${this.id}"
@@ -62,7 +94,8 @@ class CatalogList {
   }
 
   fetchCatalog() {
-    this.ccatalog = catalog;
+    //this.ccatalog = catalog;
+    this.ccatalog = catalog.filter(catalog => catalog.category.includes(pageCategory));
   }
 
   render() {

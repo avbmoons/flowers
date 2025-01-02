@@ -6,8 +6,10 @@
     <title>Flowers.catalog</title>
     <link rel="stylesheet" href="../styles/catalog/catalog.css" />
     <script defer src="../data/catalog.js"></script>
+    <script defer src="../scripts/catalogUrl.js"></script>
     <script defer src="../scripts/catalogList.js"></script>
     <script defer src="../scripts/productUrl.js"></script>
+    <script defer src="../scripts/showModal.js"></script>
     <script defer src="../scripts/showCart.js"></script>
     <script defer src="../scripts/showSearch.js"></script>
     <script defer src="../scripts/showMenu.js"></script>
@@ -29,10 +31,10 @@
             </div>
             <div class="menu-box">
               <div class="menu-box__block">
-                <a class="menu-item" href="../pages/catalog.html"
+                <a class="menu-item catalog" href="../pages/catalog.html"
                   >Bouquets&Flowers</a
                 >
-                <a class="menu-item" href="../pages/catalog.html"
+                <a class="menu-item catalog" href="../pages/catalog.html"
                   >Gifts&Cards</a
                 >
                 <a class="menu-item" href="../pages/terms.html"
@@ -183,7 +185,7 @@
           </section>
           <section class="catalog">
             <div class="catalog__heading">
-              <p class="heading-prime">Catalog</p>
+              <p class="heading-prime" id="headingPrime">Catalog</p>
               <div class="filters">
                 <button class="filter-button" id="filterButton" type="button">
                   <svg
@@ -222,6 +224,50 @@
               </div>
             </div>
             <div class="catalog__block"></div>
+          </section>
+          <section class="modal" id="modal">
+            <div class="modal__block" id="modal__block">
+              <button class="modal__block__close" id="modalClose">
+                &#10006;
+              </button>
+              <div class="modal__block__items">
+                <div data-id="1" class="product">
+                  <div class="product__image-box" id="productImage">
+                    <img
+                      class="product__image-box__image"
+                      id="product-1"
+                      src="../assets/catalog/item-3.png"
+                      alt="photo"
+                    />
+                  </div>
+                  <div class="product__text-box">
+                    <div class="product__text-box__heading" id="productTitle">
+                      <p class="product-title">Khinkali traditional</p>
+                    </div>
+                    <div class="product__text-box__weight" id="productWeight">
+                      <p class="product-weight">110&nbsp;g</p>
+                    </div>
+                    <div class="product__text-box__resume" id="productResume">
+                      <p class="product-resume">
+                        Beef, greens, onion, garlic; min. 5 units for order
+                      </p>
+                    </div>
+                    <div class="product__text-box__price-box" id="productPrice">
+                      <p class="product-price-origin" id="priceOrigin">
+                        1.6&nbsp;&euro;
+                      </p>
+                      <p class="product-price-active" id="priceActive">
+                        1.4&nbsp;&euro;
+                      </p>
+                    </div>
+                    <div class="product__text-box__button-box">
+                      <!-- <a class="to-product-page" href="#">More details...</a> -->
+                      <button class="to-cart">Add to cart</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </section>
         </main>
       </div>

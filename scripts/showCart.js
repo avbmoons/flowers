@@ -116,9 +116,9 @@ if (localStorage.getItem('flowCart') == null) {
   localStorage.setItem('flowCart', JSON.stringify(myCart));
 }
 
-const savedCart = JSON.parse(localStorage.getItem('flowCart'));
+const savedCart1 = JSON.parse(localStorage.getItem('flowCart'));
 
-myCart.products = savedCart.products;
+myCart.products = savedCart1.products;
 cartNum.textContent = myCart.count;
 
 // добавление товара в корзину
@@ -132,8 +132,8 @@ myCart.products = cardAddArr.forEach((cardAdd) => {
     console.log(cardId);
 
     const product = new Product(cardId);
-    const savedCart = JSON.parse(localStorage.getItem('flowCart'));
-    myCart.products = savedCart.products;
+    const savedCart1 = JSON.parse(localStorage.getItem('flowCart'));
+    myCart.products = savedCart1.products;
     myCart.addProduct(product);
     localStorage.setItem('flowCart', JSON.stringify(myCart));
     cartNum.textContent = myCart.count;

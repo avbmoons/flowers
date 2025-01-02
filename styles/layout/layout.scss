@@ -32,6 +32,7 @@ body {
     }
     .main {
       margin: 0 auto;
+      margin-top: $header-height;
       width: 100%;
       min-height: 85vh; // $main-min-height;
       @include flex-vertical();

@@ -18,6 +18,9 @@ body {
   height: $header-height;
   @include flex-vertical();
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  background-color: white;
   .header-top {
     margin: 0 auto;
     width: 100%;

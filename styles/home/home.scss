@@ -3,6 +3,7 @@
 @import '../header/header.scss';
 @import '../footer/footer.scss';
 @import '../vars/vars.scss';
+@import '../modal/modal.scss';
 
 * {
   margin: 0;
@@ -27,11 +28,13 @@ body {
     @include flex-vertical();
     justify-content: space-between;
     flex-grow: 1;
+    position: relative;
     .header {
       @include header();
     }
     .main {
       margin: 0 auto;
+      margin-top: $header-height;
       width: 100%;
       min-height: $main-min-height;
       height: auto;
@@ -233,4 +236,7 @@ body {
   .footer {
     @include footer();
   }
+}
+.lock {
+  overflow-y: hidden;
 }
