@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>header</title>
     <link rel="stylesheet" href="../styles/header/header.css" />
+    <script defer src="../data/catalog.js"></script>
+    <script defer src="../scripts/catalogUrl.js"></script>
+    <script defer src="../scripts/searchUrl.js"></script>
+    <script defer src="../scripts/showCart.js"></script>
     <script defer src="../scripts/showSearch.js"></script>
     <script defer src="../scripts/showMenu.js"></script>
     <script src="../scripts/toCart.js"></script>
@@ -26,7 +30,9 @@
             <a class="menu-item catalog" href="../pages/catalog.html"
               >Bouquets&Flowers</a
             >
-            <a class="menu-item catalog" href="../pages/catalog.html">Gifts&Cards</a>
+            <a class="menu-item catalog" href="../pages/catalog.html"
+              >Gifts&Cards</a
+            >
             <a class="menu-item" href="../pages/terms.html">Delivery&Payment</a>
             <a class="menu-item" href="../pages/about.html">About us</a>
           </div>
@@ -126,10 +132,24 @@
         <div class="search-input-box">
           <input
             class="search-input"
+            id="inputSearch"
             type="text"
             placeholder="Enter your searching here..."
           />
-          <button class="search-button" id="btnSearch" type="button">
+          <button
+            class="search-button clear"
+            id="btnSearch"
+            type="button"
+            onclick="searchReset()"
+          >
+            &#8634;
+          </button>
+          <button
+            class="search-button"
+            id="btnSearch"
+            type="button"
+            onclick="searchAction()"
+          >
             &#9658;
           </button>
           <button class="search-close" type="button" onclick="closeSearch();">

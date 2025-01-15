@@ -6,6 +6,7 @@
     <title>Flowers.terms</title>
     <link rel="stylesheet" href="../styles/terms/terms.css" />
     <script defer src="../scripts/catalogUrl.js"></script>
+    <script defer src="../scripts/searchUrl.js"></script>
     <script defer src="../scripts/showCart.js"></script>
     <script defer src="../scripts/showSearch.js"></script>
     <script defer src="../scripts/showMenu.js"></script>
@@ -142,10 +143,24 @@
             <div class="search-input-box">
               <input
                 class="search-input"
+                id="inputSearch"
                 type="text"
                 placeholder="Enter your searching here..."
               />
-              <button class="search-button" id="btnSearch" type="button">
+              <button
+                class="search-button clear"
+                id="btnSearch"
+                type="button"
+                onclick="searchReset()"
+              >
+                &#8634;
+              </button>
+              <button
+                class="search-button"
+                id="btnSearch"
+                type="button"
+                onclick="searchAction()"
+              >
                 &#9658;
               </button>
               <button

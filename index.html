@@ -8,6 +8,7 @@
     <script defer src="data/catalog.js"></script>
     <script defer src="scripts/categoryUrl.js"></script>
     <script defer src="scripts/popularList.js"></script>
+    <script defer src="scripts/searchUrl.js"></script>
     <script defer src="scripts/productHomeUrl.js"></script>
     <script defer src="scripts/showModal.js"></script>
     <script defer src="scripts/showCart.js"></script>
@@ -34,7 +35,9 @@
                 <a class="menu-item catalog" href="pages/catalog.html?category="
                   >Bouquets&Flowers</a
                 >
-                <a class="menu-item catalog" href="pages/catalog.html?category=">Gifts&Cards</a>
+                <a class="menu-item catalog" href="pages/catalog.html?category="
+                  >Gifts&Cards</a
+                >
                 <a class="menu-item" href="pages/terms.html"
                   >Delivery&Payment</a
                 >
@@ -142,10 +145,24 @@
             <div class="search-input-box">
               <input
                 class="search-input"
+                id="inputSearch"
                 type="text"
                 placeholder="Enter your searching here..."
               />
-              <button class="search-button" id="btnSearch" type="button">
+              <button
+                class="search-button clear"
+                id="btnSearch"
+                type="button"
+                onclick="searchReset()"
+              >
+                &#8634;
+              </button>
+              <button
+                class="search-button"
+                id="btnSearch"
+                type="button"
+                onclick="searchAction()"
+              >
                 &#9658;
               </button>
               <button

@@ -248,6 +248,7 @@ body {
         outline: $color-down-dark;
         @include text-font(14px, 400, 14px, 0%);
         color: $color-font;
+        background-color: white;
       }
       .search-input::placeholder {
         @include text-font(14px, 400, 14px, 0%);
@@ -266,6 +267,12 @@ body {
         @include text-font(16px, 400, 16px, 0%);
         color: white;
         cursor: pointer;
+      }
+      .clear {
+        background-color: white;
+        color: $color-hover-accent;
+        outline-color: white;
+        @include text-font(18px, 400, 18px, 0%);
       }
       .search-close {
         width: 5%;

@@ -297,6 +297,7 @@ body {
   line-height: 14px;
   letter-spacing: 0%;
   color: #444444;
+  background-color: white;
 }
 @media only screen and (max-width: 1023px) {
   .header .header-bottom .search-input-box .search-input {
@@ -334,6 +335,15 @@ body {
   .header .header-bottom .search-input-box .search-button {
     width: 10%;
   }
+}
+.header .header-bottom .search-input-box .clear {
+  background-color: white;
+  color: #ecc28d;
+  outline-color: white;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0%;
 }
 .header .header-bottom .search-input-box .search-close {
   width: 5%;
@@ -746,7 +756,7 @@ body {
 .modal__block__items .product__text-box__price-box .product-price-active {
   margin-top: 10px;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 16px;
   letter-spacing: 0%;
   color: #444444;
@@ -1110,6 +1120,7 @@ body {
   line-height: 14px;
   letter-spacing: 0%;
   color: #444444;
+  background-color: white;
 }
 @media only screen and (max-width: 1023px) {
   .wrapper .top .header .header-bottom .search-input-box .search-input {
@@ -1147,6 +1158,15 @@ body {
   .wrapper .top .header .header-bottom .search-input-box .search-button {
     width: 10%;
   }
+}
+.wrapper .top .header .header-bottom .search-input-box .clear {
+  background-color: white;
+  color: #ecc28d;
+  outline-color: white;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0%;
 }
 .wrapper .top .header .header-bottom .search-input-box .search-close {
   width: 5%;

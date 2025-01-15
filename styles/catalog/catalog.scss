@@ -35,11 +35,13 @@ body {
       margin: 0 auto;
       margin-top: $header-height;
       width: 100%;
-      min-height: $main-min-height;
+      min-height: 85vh; // $main-min-height;
       @include flex-vertical();
       justify-content: flex-start;
       .hero {
         margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 40px;
         width: 100%;
         max-height: $slide-height;
         @include flex-vertical();

@@ -297,6 +297,7 @@ body {
   line-height: 14px;
   letter-spacing: 0%;
   color: #444444;
+  background-color: white;
 }
 @media only screen and (max-width: 1023px) {
   .header .header-bottom .search-input-box .search-input {
@@ -334,6 +335,15 @@ body {
   .header .header-bottom .search-input-box .search-button {
     width: 10%;
   }
+}
+.header .header-bottom .search-input-box .clear {
+  background-color: white;
+  color: #ecc28d;
+  outline-color: white;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0%;
 }
 .header .header-bottom .search-input-box .search-close {
   width: 5%;
@@ -878,6 +888,7 @@ body {
   line-height: 14px;
   letter-spacing: 0%;
   color: #444444;
+  background-color: white;
 }
 @media only screen and (max-width: 1023px) {
   .wrapper .top .header .header-bottom .search-input-box .search-input {
@@ -916,6 +927,15 @@ body {
     width: 10%;
   }
 }
+.wrapper .top .header .header-bottom .search-input-box .clear {
+  background-color: white;
+  color: #ecc28d;
+  outline-color: white;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0%;
+}
 .wrapper .top .header .header-bottom .search-input-box .search-close {
   width: 5%;
   height: 100%;
@@ -950,13 +970,14 @@ body {
 }
 .wrapper .top .main .order-section {
   margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
   width: 70%;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
-  border: 1px solid red;
 }
 .wrapper .top .main .order-section .section-check {
   width: 100%;
@@ -964,6 +985,8 @@ body {
   display: none;
 }
 .wrapper .top .main .order-section .section-label {
+  margin: 0 0 5px;
+  padding: 15px 20px;
   width: 100%;
   height: 42px;
   font-size: 18px;
@@ -972,17 +995,18 @@ body {
   letter-spacing: 0%;
   background-color: #39a79d;
   color: white;
+  box-sizing: border-box;
 }
 .wrapper .top .main .order-section .section-block {
   margin: 0 auto;
+  padding: 0 30px;
   width: 90%;
   height: 0;
   background-color: #e4f2f1;
-  border: 1px solid orange;
 }
 .wrapper .top .main .order-section .section-check:checked + .section-label + .section-block {
   min-height: 42px;
-  background-color: orange;
+  background-color: #ecf9f8;
 }
 .wrapper .footer {
   margin: 0 auto;

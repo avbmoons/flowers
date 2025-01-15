@@ -6,6 +6,7 @@
     <title>Flowers.about</title>
     <link rel="stylesheet" href="../styles/about/about.css" />
     <script defer src="../scripts/catalogUrl.js"></script>
+    <script defer src="../scripts/searchUrl.js"></script>
     <script defer src="../scripts/showCart.js"></script>
     <script defer src="../scripts/showSearch.js"></script>
     <script defer src="../scripts/showMenu.js"></script>
@@ -142,10 +143,24 @@
             <div class="search-input-box">
               <input
                 class="search-input"
+                id="inputSearch"
                 type="text"
                 placeholder="Enter your searching here..."
               />
-              <button class="search-button" id="btnSearch" type="button">
+              <button
+                class="search-button clear"
+                id="btnSearch"
+                type="button"
+                onclick="searchReset()"
+              >
+                &#8634;
+              </button>
+              <button
+                class="search-button"
+                id="btnSearch"
+                type="button"
+                onclick="searchAction()"
+              >
                 &#9658;
               </button>
               <button
@@ -159,7 +174,6 @@
           </section>
         </header>
         <main class="main">
-          This page under construction. We'l present one soon
           <div class="order-block">
             <div class="order-section">
               <input
@@ -171,10 +185,7 @@
               />
               <label class="section-label" for="dataUser">Our contacts</label>
               <div class="section-block">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Provident, commodi?
-                </p>
+                <p>This page under construction. We'l present one soon</p>
               </div>
             </div>
           </div>

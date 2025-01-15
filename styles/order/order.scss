@@ -33,80 +33,17 @@ body {
     .main {
       margin: 0 auto;
       margin-top: $header-height;
-      margin-top: 40px;
+      //margin-top: 40px;
       width: 100%;
-      min-height: $main-min-height;
+      min-height: 85vh; // $main-min-height;
       @include flex-vertical();
       justify-content: flex-start;
       text-align: center;
-      // .acor-container {
-      //   //margin: 20px 0;
-      //   margin: 0 auto;
-      //   width: 80%;
-      //   .acor-body {
-      //     width: calc(100% - 40px);
-      //     margin: 0 auto;
-      //     height: 0;
-      //     color: rgba(0, 0, 0, 0);
-      //     background-color: #bfe2ff;
-      //     line-height: 18px;
-      //     padding: 0 30px;
-      //     box-sizing: border-box;
-      //     transition: color 0.5s, padding 0.5s;
-      //     overflow: hidden;
-      //     font-family: Verdana, sans-serif;
-      //     font-size: 16px;
-      //     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
-      //       0 10px 16px rgba(0, 0, 0, 0.2);
-      //     p {
-      //       margin: 0 0 10px;
-      //     }
-      //   }
-      //   label {
-      //     cursor: pointer;
-      //     background-color: #337ab7;
-      //     display: block;
-      //     padding: 15px 20px;
-      //     width: 100%;
-      //     color: #bfe2ff;
-      //     font-weight: 300;
-      //     box-sizing: border-box;
-      //     z-index: 100;
-      //     font-family: Verdana, sans-serif;
-      //     font-size: 18px;
-      //     margin: 0 0 5px;
-      //     transition: color 0.35s;
-      //   }
-      //   label:hover {
-      //     color: #fff;
-      //   }
-      //   input {
-      //     display: none;
-      //   }
-      //   label:before {
-      //     content: '\276F';
-      //     float: right;
-      //   }
-      //   input:checked + label {
-      //     background-color: #285f8f;
-      //     color: #fff;
-      //     box-shadow: 0 8px 26px rgba(0, 0, 0, 0.4),
-      //       0 28px 30px rgba(0, 0, 0, 0.3);
-      //   }
-      //   input:checked + label:before {
-      //     transition: transform 0.35s;
-      //     transform: rotate(90deg);
-      //   }
-      //   input:checked + label + .acor-body {
-      //     height: auto;
-      //     margin-top: -5px;
-      //     color: #000;
-      //     padding: 20px 30px 10px;
-      //   }
-      // }
       .order-block {
         //margin: 20px 0;
         margin: 0 auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
         width: 80%;
         height: auto;
         .order-section {

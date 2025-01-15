@@ -1,36 +1,60 @@
 const data = catalog;
 let dataLength = data.length;
 //console.log(dataLength);
+//let dataSearch = [];
 
 let categoryName = new URLSearchParams(window.location.search).get('category');
 console.log(categoryName);
 
+let searchString = new URLSearchParams(window.location.search).get('search');
+// console.log(searchString);
+
 let pageTitleText;
 let pageCategory;
+let pageSearch;
 
-for (let i=0; i<dataLength; i++) {
-  let thisCategory;
-  if (data[i].category == categoryName) {
-    thisCategory = data[i];
-    pageTitleText = thisCategory.category;
-    pageCategory = thisCategory.category;
-    //console.log(pageCategory);
-    //console.log(pageTitleText);
-  } else {
-    console.log('No category');
+if (categoryName !== null) {
+  for (let i = 0; i < dataLength; i++) {
+    let thisCategory;
+    if (data[i].category == categoryName) {
+      thisCategory = data[i];
+      pageTitleText = thisCategory.category;
+      pageCategory = thisCategory.category;
+    } else if (searchString !== null) {
+      pageTitleText = searchString;
+      pageSearch = searchString;
+    } else {
+      console.log('No category & no search');
+    }
   }
 }
+
+// for (let i = 0; i < dataLength; i++) {
+//   let thisCategory;
+//   if (data[i].category == categoryName) {
+//     thisCategory = data[i];
+//     pageTitleText = thisCategory.category;
+//     pageCategory = thisCategory.category;
+//     //console.log(pageCategory);
+//     //console.log(pageTitleText);
+//   } else {
+//     console.log('No category');
+//   }
+// }
 
 let pageTitle = document.getElementById('headingPrime');
 console.log(pageTitleText);
 
 if (pageTitleText == 'Bouquets') {
   pageTitle.innerHTML = pageTitleText + '&Flowers';
+} else if (pageTitleText == 'Gifts') {
+  pageTitle.innerHTML = pageTitleText + '&Cards';
 } else {
-  pageTitle.innerHTML = pageTitleText + "&Cards";
+  pageTitle.innerHTML = 'Search results ' + '"' + searchString + '"' + ':';
 }
 
 //pageTitle.innerHTML = pageTitleText;
+const reg = new RegExp(searchString, 'i');
 
 class CatalogItem {
   constructor(
@@ -95,7 +119,19 @@ class CatalogList {
 
   fetchCatalog() {
     //this.ccatalog = catalog;
-    this.ccatalog = catalog.filter(catalog => catalog.category.includes(pageCategory));
+    this.ccatalog = catalog.filter((catalog) =>
+      catalog.category.includes(pageCategory)
+    );
+  }
+
+  fetchSearch() {
+    this.ccatalog = catalog.filter(
+      (catalog) =>
+        reg.test(catalog.name) ||
+        reg.test(catalog.resume) ||
+        reg.test(catalog.description) ||
+        reg.test(catalog.priceActive)
+    );
   }
 
   render() {
@@ -126,6 +162,12 @@ class CatalogList {
 
 const list = new CatalogList();
 
-list.fetchCatalog();
+if (categoryName !== null) {
+  list.fetchCatalog();
+} else {
+  list.fetchSearch();
+}
+
+//list.fetchCatalog();
 
 list.render();
