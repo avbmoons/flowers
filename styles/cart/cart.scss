@@ -131,6 +131,9 @@ body {
           margin-bottom: 1%;
           width: 100%;
           height: $cart-item-height; // 100%;
+          @media only screen and (max-width: 1023px) {
+            height: 0.5 * $cart-item-height;
+          }
           @include flex-horizontal();
           justify-content: space-between;
           //border: 2px solid blue;
